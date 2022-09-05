@@ -1,0 +1,23 @@
+.nav-bar {
+  background-color: #2c3136;
+  padding: 2.5rem;
+}
+
+.cart {
+  width: 40px;
+}
+
+.nav-link {
+  color: whitesmoke;
+}
+
+.navbar-brand {
+  color: whitesmoke;
+}
+
+@media (min-width: 768px) {
+  #basic-navbar-nav {
+    display: flex;
+    justify-content: space-around;
+  }
+}
