@@ -6,6 +6,7 @@ import { useParams } from "react-router-dom";
 const ItemDetailContainer = () => {
   const [vinos, setVinos] = useState([]);
   let { id } = useParams();
+
   useEffect(() => {
     const getData = async (url) => {
       let resp = await fetch(url);
