@@ -26,7 +26,6 @@ const ItemList = () => {
     getData("http://localhost:5000/vinos");
   }, []);
 
-  console.log(vinos);
   return (
     <Container>
       <Row className="d-flex flex-wrap">

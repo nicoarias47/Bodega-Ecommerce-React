@@ -1,0 +1,39 @@
+.img-vino {
+  height: 85vh;
+}
+
+.img-vino img {
+  height: 85vh;
+  width: 100%;
+}
+
+.col-detail {
+  height: 85vh;
+  background-color: #ffff;
+  padding: 2rem;
+  color: #2c3136;
+}
+
+.description {
+  font-size: 1rem;
+  font-weight: 300;
+}
+
+.description-footer {
+  display: flex;
+  flex-direction: column;
+  margin-top: 4rem;
+  border-top: 1px solid #b2936d;
+}
+
+.description-footer span {
+  padding-top: 1rem;
+  border-bottom: 1px solid #2c313650;
+}
+
+.marca {
+  color: #b2936d;
+  font-size: 1rem;
+  font-weight: 500;
+  letter-spacing: 1px;
+}
