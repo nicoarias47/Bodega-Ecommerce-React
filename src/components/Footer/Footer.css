@@ -7,6 +7,24 @@
   width: 125px;
 }
 
-.container {
+.container-footer {
   padding-top: 1.5rem;
+}
+
+.footer-title {
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: #ffff;
+}
+
+.footer-description {
+  font-size: 0.9rem;
+  font-weight: 400;
+  color: #7d7f81;
+}
+
+.footer-derechos {
+  font-size: 1rem;
+  font-weight: 400;
+  color: #b0b1b1;
 }
