@@ -38,6 +38,7 @@ const ItemList = () => {
             variety={el.variety}
             vineyard={el.vineyard}
             breeding={el.breeding}
+            id={el.id}
           />
         ))}
       </Row>
