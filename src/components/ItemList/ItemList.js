@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Container, Row } from "react-bootstrap";
 import CardItem from "../CardItem/CardItem";
+import Loading from "../Loading/Loading";
 
 const ItemList = () => {
   const [vinos, setVinos] = useState([]);
@@ -29,18 +30,22 @@ const ItemList = () => {
   return (
     <Container>
       <Row className="d-flex flex-wrap">
-        {vinos.map((el) => (
-          <CardItem
-            key={el.id}
-            name={el.name}
-            img={el.img}
-            description={el.description}
-            variety={el.variety}
-            vineyard={el.vineyard}
-            breeding={el.breeding}
-            id={el.id}
-          />
-        ))}
+        {vinos.length === 0 ? (
+          <Loading />
+        ) : (
+          vinos.map((el) => (
+            <CardItem
+              key={el.id}
+              name={el.name}
+              img={el.img}
+              description={el.description}
+              variety={el.variety}
+              vineyard={el.vineyard}
+              breeding={el.breeding}
+              id={el.id}
+            />
+          ))
+        )}
       </Row>
     </Container>
   );
