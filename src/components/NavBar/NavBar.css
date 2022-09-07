@@ -1,6 +1,5 @@
 .nav-bar {
   background-color: #2c3136;
-  padding: 2.5rem;
 }
 
 .cart {
@@ -13,6 +12,10 @@
 
 .navbar-brand {
   color: whitesmoke;
+}
+
+.navbar-brand img {
+  width: 125px;
 }
 
 @media (min-width: 768px) {

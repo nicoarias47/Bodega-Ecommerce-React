@@ -19,6 +19,13 @@ const Footer = () => {
             <span className="footer-description">info@wines.com</span>
           </Col>
           <Col className="d-flex flex-column">
+            <h2 className="footer-title">Oficinas Mendoza</h2>
+            <span className="footer-description">8 de septiembre</span>
+            <span className="footer-description">Villa Bastías</span>
+            <span className="footer-description">Tel: +54(0261) 1234-5678</span>
+            <span className="footer-description">info@wines.com</span>
+          </Col>
+          <Col className="d-flex flex-column">
             <h2 className="footer-title">Bodega Soul Wines</h2>
             <span className="footer-description">RP47 NombreFalso</span>
             <span className="footer-description">Valle de Uco, Mendoza</span>

@@ -9,7 +9,7 @@ function CardItem({ name, img, variety, breeding, id }) {
   return (
     <>
       <Col className="col-6 col-md-4 col-lg-3 my-2">
-        <Card style={{}}>
+        <Card>
           <Link to={`/detalle/${id}`}>
             <Card.Img variant="top" src={img} />
           </Link>

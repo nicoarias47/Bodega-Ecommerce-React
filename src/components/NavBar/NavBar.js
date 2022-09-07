@@ -6,13 +6,13 @@ import Navbar from "react-bootstrap/Navbar";
 import CartImg from "./cart.png";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./NavBar.css";
-
+import logoImg from "../../img/logo.png";
 const NavBar = () => {
   return (
     <Navbar expand="md" className="nav-bar">
       <Container fluid="lg" className="containerasd">
         <Link to="/" className="navbar-brand">
-          LOGO
+          <img src={logoImg} />
         </Link>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">

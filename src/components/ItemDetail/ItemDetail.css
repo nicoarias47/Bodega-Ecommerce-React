@@ -10,6 +10,12 @@
   color: #2c3136;
 }
 
+.col-detail h1 {
+  font-family: "Montserrat", sans-serif;
+  font-size: 2.5rem;
+  font-weight: 500;
+}
+
 .description {
   font-size: 1rem;
   font-weight: 300;
@@ -22,14 +28,31 @@
   border-top: 1px solid #b2936d;
 }
 
-.description-footer span {
+/* .description-footer span {
   padding-top: 1rem;
-  border-bottom: 1px solid #2c313650;
-}
+  border-bottom: 1px solid #b0b1b1;
+} */
 
 .marca {
   color: #b2936d;
+  font-family: Cinzel, sans-serif;
   font-size: 1rem;
   font-weight: 500;
   letter-spacing: 1px;
+}
+
+.detail {
+  padding-top: 1rem;
+  border-bottom: 1px solid #b0b1b1;
+}
+
+.tipo {
+  font-size: 0.9rem;
+  font-weight: 500;
+  letter-spacing: 1px;
+}
+
+.tipo-dato {
+  font-size: 1rem;
+  font-weight: 500;
 }
