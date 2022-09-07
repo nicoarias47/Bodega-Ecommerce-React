@@ -1,6 +1,5 @@
 .nav-bar {
   background-color: #2c3136;
-  padding: 2.5rem;
 }
 
 .cart {
@@ -9,10 +8,25 @@
 
 .nav-link {
   color: whitesmoke;
+  font-family: "Monserrat", sans-serif;
+  font-size: 0.75rem;
+  font-weight: 400;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  margin-left: 1rem;
+  padding-top: 1.5rem;
 }
 
-.navbar-brand {
-  color: whitesmoke;
+.nav-link:hover {
+  color: #b2936d;
+}
+
+.nav-link:focus {
+  color: #b2936d;
+}
+
+.navbar-brand img {
+  width: 115px;
 }
 
 @media (min-width: 768px) {

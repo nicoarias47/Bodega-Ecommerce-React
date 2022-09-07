@@ -1,9 +1,11 @@
 import React, { useState, useEffect } from "react";
 import { Container, Row } from "react-bootstrap";
 import ItemDetail from "../ItemDetail/ItemDetail";
+import { useParams } from "react-router-dom";
 
 const ItemDetailContainer = () => {
   const [vinos, setVinos] = useState([]);
+  let { id } = useParams();
 
   useEffect(() => {
     const getData = async (url) => {
@@ -12,8 +14,8 @@ const ItemDetailContainer = () => {
 
       setVinos(data);
     };
-    getData("http://localhost:5000/vinos/1");
-  }, []);
+    getData(`http://localhost:5000/vinos/${id}`);
+  }, [id]);
 
   return (
     <Container>
