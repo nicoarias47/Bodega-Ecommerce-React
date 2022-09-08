@@ -3,10 +3,11 @@ import { Link } from "react-router-dom";
 import Container from "react-bootstrap/Container";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
-import CartImg from "./cart.png";
+import logoImg from "../../img/logo.png";
+import CartWidget from "../CartWidget/CartWidget";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./NavBar.css";
-import logoImg from "../../img/logo.png";
+
 const NavBar = () => {
   return (
     <Navbar expand="md" className="nav-bar">
@@ -28,7 +29,7 @@ const NavBar = () => {
               Contacto
             </Link>
           </Nav>
-          <img src={CartImg} className="cart" alt="carrito de compras" />
+          <CartWidget />
         </Navbar.Collapse>
       </Container>
     </Navbar>

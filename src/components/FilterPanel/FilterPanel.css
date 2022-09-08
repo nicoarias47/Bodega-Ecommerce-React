@@ -1,5 +1,6 @@
 .filter {
   color: #474747;
+  margin-bottom: 3rem;
 }
 
 .filter h1 {
@@ -34,4 +35,13 @@
   font-size: 0.9rem;
   font-weight: 400;
   cursor: pointer;
+  margin: 0.2rem 0;
+}
+
+.filter h4:hover {
+  color: #b2936d;
+}
+
+.filter span:hover {
+  color: #b2936d;
 }

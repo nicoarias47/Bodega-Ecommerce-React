@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import CardItem from "../CardItem/CardItem";
+import FilterPanel from "../FilterPanel/FilterPanel";
 import Loading from "../Loading/Loading";
-import "./ItemList.css";
 
 const ItemList = () => {
   const [vinos, setVinos] = useState([]);
@@ -19,23 +19,7 @@ const ItemList = () => {
   return (
     <Container className="py-5" fluid="lg">
       <Row>
-        <Col className="col-12 col-sm-6 col-md-4 filter">
-          <h1>Filtrar por</h1>
-          <h3>Vinos</h3>
-          <h4 className="filter-red">Tintos</h4>
-          <span>Malbec</span>
-          <span>Blend</span>
-          <span>Cabernet Sauvignon</span>
-          <span>Syrah</span>
-          <h4 className="filter-white">Blancos</h4>
-          <h3>Crianza</h3>
-          <span>12 meses</span>
-          <span>18 meses</span>
-          <span>24 meses</span>
-          <h3>Precio</h3>
-          <span>Mayor precio</span>
-          <span>Menor precio</span>
-        </Col>
+        <FilterPanel />
         <Col className="col-12 col-sm-6 col-md-8 d-flex flex-wrap gap-2">
           {vinos.length === 0 ? (
             <Loading />
