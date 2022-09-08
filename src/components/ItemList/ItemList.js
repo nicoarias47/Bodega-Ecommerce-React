@@ -22,7 +22,7 @@ const ItemList = () => {
         <Col className="col-12 col-sm-6 col-md-4 filter">
           <h1>Filtrar por</h1>
           <h3>Vinos</h3>
-          <h4>Tintos</h4>
+          <h4 className="filter-red">Tintos</h4>
           <span>Malbec</span>
           <span>Blend</span>
           <span>Cabernet Sauvignon</span>

@@ -3,7 +3,7 @@
 }
 
 .filter h1 {
-  font-size: 1.4rem;
+  font-size: 1.5rem;
   font-family: "Cinzel", sans-serif;
   letter-spacing: 1px;
   border-bottom: thin solid #b2936d;
@@ -11,17 +11,17 @@
 }
 
 .filter h3 {
-  font-size: 1.2rem;
-  font-weight: bold;
+  font-size: 1.3rem;
+  font-weight: 400;
   font-family: "Montserrat", sans-serif;
   border-bottom: thin solid #b2936d;
   margin: 1rem 0 0 0;
 }
 
 .filter h4 {
-  font-size: 1rem;
+  font-size: 1.1rem;
   font-weight: 400;
-  margin: 1rem 0 0 0;
+  margin: 1rem 0 0.4rem 0;
   cursor: pointer;
 }
 
@@ -33,6 +33,5 @@
   display: block;
   font-size: 0.9rem;
   font-weight: 400;
-  padding: 0.1rem 0;
   cursor: pointer;
 }

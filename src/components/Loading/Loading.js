@@ -3,7 +3,16 @@ import { Row } from "react-bootstrap";
 
 const Loading = () => {
   return (
-    <Row className="d-flex justify-content-center py-3">
+    <Row
+      className="d-flex justify-content-center py-3"
+      style={{
+        position: "relative",
+        left: "50%",
+        right: "50%",
+        top: "50%",
+        bottom: "50%",
+      }}
+    >
       <Spinner animation="border" role="status" variant="secondary">
         <span className="visually-hidden">Loading...</span>
       </Spinner>
