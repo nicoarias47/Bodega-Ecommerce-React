@@ -6,10 +6,10 @@ const ItemDetail = ({ data }) => {
   return (
     <Container>
       <Row>
-        <Col className="col-6 img-vino">
+        <Col className="col-12 col-sm-6 img-vino">
           <img src="https://placeimg.com/800/800/nature" alt={data.name} />
         </Col>
-        <Col className="col-6 col-detail d-flex flex-column justify-content-between">
+        <Col className="col-12 col-sm-6 col-detail d-flex flex-column justify-content-between">
           <div>
             <span className="marca">Soul</span>
             <h1>{data.name}</h1>

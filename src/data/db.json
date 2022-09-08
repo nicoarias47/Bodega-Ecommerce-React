@@ -2,63 +2,83 @@
   "vinos": [
     {
       "id": 1,
-      "name": "Vino n1",
+      "name": "Soul 1847 Malbec",
       "img": "https://placeimg.com/400/200/nature",
-      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ac ante et neque viverra semper ultricies sed massa. Etiam quis aliquam orci. Aenean blandit ligula sit amet sem faucibus, vitae venenatis mauris volutpat. Quisque rutrum elit eu felis pretium ornare. Curabitur non justo velit. In nisi risus, efficitur ut dui eget, euismod egestas ex. Etiam vel tempor justo, non bibendum arcu. In cursus quis elit non posuere. Vivamus et massa mi. In dapibus hendrerit mi vitae euismod. Fusce ultrices odio at hendrerit malesuada. Morbi dapibus ornare ipsum sed sollicitudin. Vivamus at fringilla nulla. Quisque ac nibh in nunc volutpat mattis vel sit amet libero. Sed ante augue, semper ac lorem a, posuere aliquet nibh.",
-      "variety": "100% Cabernet Sauvignon",
-      "vineyard": "Los Angeles",
-      "harvest": "2021",
-      "breeding": "18 meses en barricas de Roble Francés nuevo y de 2° uso."
+      "description": "El viñedo de la finca en Mendoza, plantado en 1847, es la inspiración para este vino y un tributo a nuestra historia. Se elabora exclusivamente a partir de vides de más de 100 años de antigüedad. Soul desde hace más de 170 años, elabora vinos. Es la máxima expresión de los pioneros de la viticultura en Argentina.",
+      "variety": "100% Malbec",
+      "vineyard": "Valle Soul",
+      "harvest": "2020",
+      "breeding": "18 meses en barricas de Roble Francés nuevo y de 2° uso"
     },
     {
       "id": 2,
-      "name": "Vino n1",
+      "name": "High Voltage Malbec",
       "img": "https://placeimg.com/400/200/nature",
-      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ac ante et neque viverra semper ultricies sed massa. Etiam quis aliquam orci. Aenean blandit ligula sit amet sem faucibus, vitae venenatis mauris volutpat. Quisque rutrum elit eu felis pretium ornare. Curabitur non justo velit. In nisi risus, efficitur ut dui eget, euismod egestas ex. Etiam vel tempor justo, non bibendum arcu. In cursus quis elit non posuere. Vivamus et massa mi. In dapibus hendrerit mi vitae euismod. Fusce ultrices odio at hendrerit malesuada. Morbi dapibus ornare ipsum sed sollicitudin. Vivamus at fringilla nulla. Quisque ac nibh in nunc volutpat mattis vel sit amet libero. Sed ante augue, semper ac lorem a, posuere aliquet nibh.",
-      "variety": "100% Cabernet Sauvignon",
-      "vineyard": "Los Angeles",
-      "harvest": "2021",
-      "breeding": "18 meses en barricas de Roble Francés nuevo y de 2° uso."
+      "description": "La verdadera expresión del terroir en este Malbec proviene de la altitud extrema en la que se asienta el viñedo. A estas alturas las uvas reciben más sol y tienen menos protección UV, lo cual hace que la piel sea más gruesa y ofrezca una sensación más robusta en boca, acompañado de una acidez fresca.",
+      "variety": "100% Malbec",
+      "vineyard": "Valle Soul",
+      "harvest": "2020",
+      "breeding": "24 meses en barricas de Roble Frances de 3° y 4° uso."
     },
     {
       "id": 3,
-      "name": "Vino n1",
+      "name": "Soul 1831 Cabernet Sauvignon",
       "img": "https://placeimg.com/400/200/nature",
-      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ac ante et neque viverra semper ultricies sed massa. Etiam quis aliquam orci. Aenean blandit ligula sit amet sem faucibus, vitae venenatis mauris volutpat. Quisque rutrum elit eu felis pretium ornare. Curabitur non justo velit. In nisi risus, efficitur ut dui eget, euismod egestas ex. Etiam vel tempor justo, non bibendum arcu. In cursus quis elit non posuere. Vivamus et massa mi. In dapibus hendrerit mi vitae euismod. Fusce ultrices odio at hendrerit malesuada. Morbi dapibus ornare ipsum sed sollicitudin. Vivamus at fringilla nulla. Quisque ac nibh in nunc volutpat mattis vel sit amet libero. Sed ante augue, semper ac lorem a, posuere aliquet nibh.",
+      "description": "El viñedo de la finca en Mendoza, plantado en 1847, es la inspiración para este vino y un tributo a nuestra historia. Se elabora exclusivamente a partir de vides de más de 100 años de antigüedad. Soul desde hace más de 170 años, elabora vinos. Es la máxima expresión de los pioneros de la viticultura en Argentina.",
       "variety": "100% Cabernet Sauvignon",
-      "vineyard": "Los Angeles",
+      "vineyard": "Valle Soul",
       "harvest": "2021",
       "breeding": "18 meses en barricas de Roble Francés nuevo y de 2° uso."
     },
     {
       "id": 4,
-      "name": "Vino n1",
+      "name": "Sand Soul Malbec",
       "img": "https://placeimg.com/400/200/nature",
-      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ac ante et neque viverra semper ultricies sed massa. Etiam quis aliquam orci. Aenean blandit ligula sit amet sem faucibus, vitae venenatis mauris volutpat. Quisque rutrum elit eu felis pretium ornare. Curabitur non justo velit. In nisi risus, efficitur ut dui eget, euismod egestas ex. Etiam vel tempor justo, non bibendum arcu. In cursus quis elit non posuere. Vivamus et massa mi. In dapibus hendrerit mi vitae euismod. Fusce ultrices odio at hendrerit malesuada. Morbi dapibus ornare ipsum sed sollicitudin. Vivamus at fringilla nulla. Quisque ac nibh in nunc volutpat mattis vel sit amet libero. Sed ante augue, semper ac lorem a, posuere aliquet nibh.",
-      "variety": "100% Cabernet Sauvignon",
-      "vineyard": "Los Angeles",
+      "description": "“Sand Soul” es el resultado de la dedicación, la paciencia y el indomable espíritu de innovación de Bodega Soul. Pioneros en el cultivo y la elaboración de vinos a una altitud extrema.",
+      "variety": "100% Malbec",
+      "vineyard": "Valle Soul",
       "harvest": "2021",
-      "breeding": "18 meses en barricas de Roble Francés nuevo y de 2° uso."
+      "breeding": "12 meses en barricas de Roble Francés y 6 meses en botella"
     },
     {
       "id": 5,
-      "name": "Vino n1",
+      "name": "Authentic Soul Malbec",
       "img": "https://placeimg.com/400/200/nature",
-      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ac ante et neque viverra semper ultricies sed massa. Etiam quis aliquam orci. Aenean blandit ligula sit amet sem faucibus, vitae venenatis mauris volutpat. Quisque rutrum elit eu felis pretium ornare. Curabitur non justo velit. In nisi risus, efficitur ut dui eget, euismod egestas ex. Etiam vel tempor justo, non bibendum arcu. In cursus quis elit non posuere. Vivamus et massa mi. In dapibus hendrerit mi vitae euismod. Fusce ultrices odio at hendrerit malesuada. Morbi dapibus ornare ipsum sed sollicitudin. Vivamus at fringilla nulla. Quisque ac nibh in nunc volutpat mattis vel sit amet libero. Sed ante augue, semper ac lorem a, posuere aliquet nibh.",
-      "variety": "100% Cabernet Sauvignon",
-      "vineyard": "Los Angeles",
+      "description": "Un homenaje a nuestros pioneros que plantaron los viñedos y fundaron la bodega en 1847. Desde entonces los viñedos de Bodega Soul han sido cultivados con prácticas agrícolas sustentables para lograr una “auténtica” expresión del terroir. “Authentic Soul” es producido con técnicas antiguas de elaboración de vino como el piageage y sin paso por roble para conservar la frescura y la pureza de la fruta.",
+      "variety": "100% Malbec",
+      "vineyard": "Valle Soul",
       "harvest": "2021",
-      "breeding": "18 meses en barricas de Roble Francés nuevo y de 2° uso."
+      "breeding": "10 meses en tanque, 10 meses en botella"
     },
     {
       "id": 6,
-      "name": "Vino n1",
+      "name": "Soul Torrents",
       "img": "https://placeimg.com/400/200/nature",
-      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ac ante et neque viverra semper ultricies sed massa. Etiam quis aliquam orci. Aenean blandit ligula sit amet sem faucibus, vitae venenatis mauris volutpat. Quisque rutrum elit eu felis pretium ornare. Curabitur non justo velit. In nisi risus, efficitur ut dui eget, euismod egestas ex. Etiam vel tempor justo, non bibendum arcu. In cursus quis elit non posuere. Vivamus et massa mi. In dapibus hendrerit mi vitae euismod. Fusce ultrices odio at hendrerit malesuada. Morbi dapibus ornare ipsum sed sollicitudin. Vivamus at fringilla nulla. Quisque ac nibh in nunc volutpat mattis vel sit amet libero. Sed ante augue, semper ac lorem a, posuere aliquet nibh.",
-      "variety": "100% Cabernet Sauvignon",
-      "vineyard": "Los Angeles",
+      "description": "Es la cepa blanca emblemática de Argentina, que alcanza su máxima expresión en esta región, con un microclima especial a 1700msnm la cual se considera la mejor altitud para la variedad. Debido a la gran amplitud térmica, la exposición solar y al singular terruño, se logra una expresión aromática única que la distingue del resto de las regiones y sus vinos, por su gran frescura y excelente acidez.",
+      "variety": "100% Torrones",
+      "vineyard": "Valle Soul",
       "harvest": "2021",
-      "breeding": "18 meses en barricas de Roble Francés nuevo y de 2° uso."
+      "breeding": "10 meses en tanque, 10 meses en botella"
+    },
+    {
+      "id": 7,
+      "name": "Special Lot Malbec",
+      "img": "https://placeimg.com/400/200/nature",
+      "description": "Malbec de una sola cepa, plantado a pie franco de nuestro propio vivero. Plantar a pie franco permite la expresión pura del varietal, sin la influencia de un injerto.",
+      "variety": "100% Malbec",
+      "vineyard": "Valle Soul",
+      "harvest": "2020",
+      "breeding": "12 meses en barrica de Roble"
+    },
+    {
+      "id": 8,
+      "name": "Special Lot Syrah",
+      "img": "https://placeimg.com/400/200/nature",
+      "description": "Este Lote Especial Syrah rinde homenaje a la gran altitud y a las frescas noches salteñas. Hemos logrado elegancia y frescura en este vino. Es poderoso pero elegante.",
+      "variety": "100% Syrah",
+      "vineyard": "Valle Soul",
+      "harvest": "2020",
+      "breeding": "12 meses en barrica de Roble"
     }
   ]
 }

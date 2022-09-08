@@ -18,7 +18,7 @@ const ItemDetailContainer = () => {
   }, [id]);
 
   return (
-    <Container>
+    <Container fluid="lg">
       <Row className="d-flex flex-wrap">
         <ItemDetail data={vinos} />
       </Row>

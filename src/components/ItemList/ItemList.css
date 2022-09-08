@@ -1,0 +1,38 @@
+.filter {
+  color: #474747;
+}
+
+.filter h1 {
+  font-size: 1.4rem;
+  font-family: "Cinzel", sans-serif;
+  letter-spacing: 1px;
+  border-bottom: thin solid #b2936d;
+  margin-bottom: 1.5rem;
+}
+
+.filter h3 {
+  font-size: 1.2rem;
+  font-weight: bold;
+  font-family: "Montserrat", sans-serif;
+  border-bottom: thin solid #b2936d;
+  margin: 1rem 0 0 0;
+}
+
+.filter h4 {
+  font-size: 1rem;
+  font-weight: 400;
+  margin: 1rem 0 0 0;
+  cursor: pointer;
+}
+
+.filter-white {
+  margin: 1rem 0;
+}
+
+.filter span {
+  display: block;
+  font-size: 0.9rem;
+  font-weight: 400;
+  padding: 0.1rem 0;
+  cursor: pointer;
+}

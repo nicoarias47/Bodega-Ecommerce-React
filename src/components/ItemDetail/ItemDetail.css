@@ -4,7 +4,7 @@
 }
 
 .col-detail {
-  height: 85vh;
+  height: auto;
   background-color: #ffff;
   padding: 2rem;
   color: #2c3136;
@@ -50,9 +50,17 @@
   font-size: 0.9rem;
   font-weight: 500;
   letter-spacing: 1px;
+  padding-right: 3rem;
 }
 
 .tipo-dato {
   font-size: 1rem;
   font-weight: 500;
+  text-align: right;
+}
+
+@media (max-width: 576px) {
+  .img-vino img {
+    height: auto;
+  }
 }
