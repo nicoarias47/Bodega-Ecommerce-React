@@ -21,7 +21,7 @@ function CardItem({ name, img, variety, id, stock, price }) {
               <Card.Text className="see-detail">Ver mas</Card.Text>
             </Link>
             <ItemCount stock={stock} price={price} />
-            <Button className="btn-buy">Comprar</Button>
+            <Button className="btn-buy">Agregar al carrito</Button>
           </Card.Body>
         </Card>
       </Col>
