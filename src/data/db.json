@@ -8,7 +8,9 @@
       "variety": "100% Malbec",
       "vineyard": "Valle Soul",
       "harvest": "2020",
-      "breeding": "18 meses en barricas de Roble Francés nuevo y de 2° uso"
+      "breeding": "18 meses en barricas de Roble Francés nuevo y de 2° uso",
+      "stock": 9,
+      "price": 700
     },
     {
       "id": 2,
@@ -18,7 +20,9 @@
       "variety": "100% Malbec",
       "vineyard": "Valle Soul",
       "harvest": "2020",
-      "breeding": "24 meses en barricas de Roble Frances de 3° y 4° uso."
+      "breeding": "24 meses en barricas de Roble Frances de 3° y 4° uso.",
+      "stock": 22,
+      "price": 500
     },
     {
       "id": 3,
@@ -28,7 +32,9 @@
       "variety": "100% Cabernet Sauvignon",
       "vineyard": "Valle Soul",
       "harvest": "2021",
-      "breeding": "18 meses en barricas de Roble Francés nuevo y de 2° uso."
+      "breeding": "18 meses en barricas de Roble Francés nuevo y de 2° uso.",
+      "stock": 15,
+      "price": 1200
     },
     {
       "id": 4,
@@ -38,7 +44,9 @@
       "variety": "100% Malbec",
       "vineyard": "Valle Soul",
       "harvest": "2021",
-      "breeding": "12 meses en barricas de Roble Francés y 6 meses en botella"
+      "breeding": "12 meses en barricas de Roble Francés y 6 meses en botella",
+      "stock": 5,
+      "price": 975
     },
     {
       "id": 5,
@@ -48,7 +56,9 @@
       "variety": "100% Malbec",
       "vineyard": "Valle Soul",
       "harvest": "2021",
-      "breeding": "10 meses en tanque, 10 meses en botella"
+      "breeding": "10 meses en tanque, 10 meses en botella",
+      "stock": 19,
+      "price": 925
     },
     {
       "id": 6,
@@ -58,7 +68,9 @@
       "variety": "100% Torrones",
       "vineyard": "Valle Soul",
       "harvest": "2021",
-      "breeding": "10 meses en tanque, 10 meses en botella"
+      "breeding": "10 meses en tanque, 10 meses en botella",
+      "stock": 3,
+      "price": 2110
     },
     {
       "id": 7,
@@ -68,7 +80,9 @@
       "variety": "100% Malbec",
       "vineyard": "Valle Soul",
       "harvest": "2020",
-      "breeding": "12 meses en barrica de Roble"
+      "breeding": "12 meses en barrica de Roble",
+      "stock": 31,
+      "price": 650
     },
     {
       "id": 8,
@@ -78,7 +92,9 @@
       "variety": "100% Syrah",
       "vineyard": "Valle Soul",
       "harvest": "2020",
-      "breeding": "12 meses en barrica de Roble"
+      "breeding": "12 meses en barrica de Roble",
+      "stock": 27,
+      "price": 2700
     }
   ]
 }

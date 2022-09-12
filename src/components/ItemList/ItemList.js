@@ -34,6 +34,8 @@ const ItemList = () => {
                 vineyard={el.vineyard}
                 breeding={el.breeding}
                 id={el.id}
+                price={el.price}
+                stock={el.stock}
               />
             ))
           )}
