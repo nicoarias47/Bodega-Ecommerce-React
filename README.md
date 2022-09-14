@@ -1,4 +1,4 @@
-# Bodega de Vino - Proyecto Ecommerce para CoderHouse
+# Bodega de Vinos - Proyecto Ecommerce para CoderHouse
 
 ### Esta rama representa un desafío de CoderHouse en el cual se solicitaba la utilización de Context
 
