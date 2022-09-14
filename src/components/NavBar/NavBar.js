@@ -11,7 +11,7 @@ import "./NavBar.css";
 const NavBar = () => {
   return (
     <Navbar expand="md" className="nav-bar">
-      <Container fluid="lg" className="containerasd">
+      <Container fluid="lg">
         <Link to="/" className="navbar-brand">
           <img src={logoImg} />
         </Link>

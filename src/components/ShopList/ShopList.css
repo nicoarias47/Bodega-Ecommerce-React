@@ -1,0 +1,36 @@
+.shop-title {
+  font-family: "Cinzel", sans-serif;
+  color: #b2936d;
+  letter-spacing: 1px;
+  margin-bottom: 2rem;
+}
+
+.shop-clear {
+  color: #b2936d;
+  padding-top: 1rem;
+  font-size: 1.5rem;
+  font-family: "Cinzel", sans-serif;
+  letter-spacing: 1px;
+  margin-bottom: 15rem;
+}
+
+table {
+  border-spacing: 0;
+  border-collapse: collapse;
+  width: 100%;
+  color: #2c3136;
+  font-family: "Lato", sans-serif;
+}
+
+th,
+td {
+  text-align: left;
+  padding: 0.5rem;
+  border-bottom: 1px solid #b2936d;
+  font-weight: 300;
+}
+
+th {
+  letter-spacing: 1px;
+  font-weight: 400;
+}

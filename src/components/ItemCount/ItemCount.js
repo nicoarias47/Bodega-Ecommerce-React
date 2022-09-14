@@ -1,9 +1,10 @@
 import React, { useState } from "react";
 import { Row, Col } from "react-bootstrap";
+import BtnAddCart from "../BtnAddCart/BtnAddCart";
 import "./ItemCount.css";
 
-const ItemCount = ({ stock, price }) => {
-  const [count, setCount] = useState(0);
+const ItemCount = ({ stock, price, countU, name, variety, id }) => {
+  const [count, setCount] = useState(countU);
   const [stockCard, setStockCard] = useState(stock);
 
   const sumar = () => {
@@ -35,6 +36,14 @@ const ItemCount = ({ stock, price }) => {
           +
         </button>
       </Col>
+      <BtnAddCart
+        price={price}
+        count={count}
+        name={name}
+        variety={variety}
+        setCount={setCount}
+        id={id}
+      />
     </Row>
   );
 };

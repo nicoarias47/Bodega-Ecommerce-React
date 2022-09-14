@@ -1,12 +1,11 @@
 import React from "react";
-import Button from "react-bootstrap/Button";
 import Card from "react-bootstrap/Card";
 import { Col } from "react-bootstrap";
 import ItemCount from "../ItemCount/ItemCount";
 import { Link } from "react-router-dom";
 import "./CardItem.css";
 
-function CardItem({ name, img, variety, id, stock, price }) {
+function CardItem({ name, img, variety, id, stock, price, countU }) {
   return (
     <>
       <Col className="d-flex align-items-stretch">
@@ -20,8 +19,14 @@ function CardItem({ name, img, variety, id, stock, price }) {
             <Link to={`/detalle/${id}`} style={{ textDecoration: "none" }}>
               <Card.Text className="see-detail">Ver mas</Card.Text>
             </Link>
-            <ItemCount stock={stock} price={price} />
-            <Button className="btn-buy">Agregar al carrito</Button>
+            <ItemCount
+              stock={stock}
+              price={price}
+              countU={countU}
+              name={name}
+              variety={variety}
+              id={id}
+            />
           </Card.Body>
         </Card>
       </Col>

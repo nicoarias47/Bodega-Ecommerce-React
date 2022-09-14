@@ -10,7 +10,8 @@
       "harvest": "2020",
       "breeding": "18 meses en barricas de Roble Francés nuevo y de 2° uso",
       "stock": 9,
-      "price": 700
+      "price": 700,
+      "countU": 0
     },
     {
       "id": 2,
@@ -22,7 +23,8 @@
       "harvest": "2020",
       "breeding": "24 meses en barricas de Roble Frances de 3° y 4° uso.",
       "stock": 22,
-      "price": 500
+      "price": 500,
+      "countU": 0
     },
     {
       "id": 3,
@@ -34,7 +36,8 @@
       "harvest": "2021",
       "breeding": "18 meses en barricas de Roble Francés nuevo y de 2° uso.",
       "stock": 15,
-      "price": 1200
+      "price": 1200,
+      "countU": 0
     },
     {
       "id": 4,
@@ -46,7 +49,8 @@
       "harvest": "2021",
       "breeding": "12 meses en barricas de Roble Francés y 6 meses en botella",
       "stock": 5,
-      "price": 975
+      "price": 975,
+      "countU": 0
     },
     {
       "id": 5,
@@ -58,7 +62,8 @@
       "harvest": "2021",
       "breeding": "10 meses en tanque, 10 meses en botella",
       "stock": 19,
-      "price": 925
+      "price": 925,
+      "countU": 0
     },
     {
       "id": 6,
@@ -70,7 +75,8 @@
       "harvest": "2021",
       "breeding": "10 meses en tanque, 10 meses en botella",
       "stock": 3,
-      "price": 2110
+      "price": 2110,
+      "countU": 0
     },
     {
       "id": 7,
@@ -82,7 +88,8 @@
       "harvest": "2020",
       "breeding": "12 meses en barrica de Roble",
       "stock": 31,
-      "price": 650
+      "price": 650,
+      "countU": 0
     },
     {
       "id": 8,
@@ -94,7 +101,8 @@
       "harvest": "2020",
       "breeding": "12 meses en barrica de Roble",
       "stock": 27,
-      "price": 2700
+      "price": 2700,
+      "countU": 0
     }
   ]
 }

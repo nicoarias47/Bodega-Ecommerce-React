@@ -1,21 +1,12 @@
-import React, { useState, useEffect } from "react";
+import React, { useContext } from "react";
+import { DataContext } from "../../context/DataContext";
 import { Container, Row, Col } from "react-bootstrap";
 import CardItem from "../CardItem/CardItem";
 import FilterPanel from "../FilterPanel/FilterPanel";
 import Loading from "../Loading/Loading";
 
 const ItemList = () => {
-  const [vinos, setVinos] = useState([]);
-
-  useEffect(() => {
-    const getData = async (url) => {
-      let resp = await fetch(url);
-      let data = await resp.json();
-      setVinos(data);
-    };
-    getData("http://localhost:5000/vinos");
-  }, []);
-
+  const { vinos } = useContext(DataContext);
   return (
     <Container className="py-5" fluid="lg">
       <Row>
@@ -36,6 +27,7 @@ const ItemList = () => {
                 id={el.id}
                 price={el.price}
                 stock={el.stock}
+                countU={el.countU}
               />
             ))
           )}
