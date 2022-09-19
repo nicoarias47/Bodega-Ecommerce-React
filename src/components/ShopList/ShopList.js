@@ -3,6 +3,7 @@ import { Container, Row, Col } from "react-bootstrap";
 import ShopTable from "../ShopTable/ShopTable";
 import { CartContext } from "../../context/CartContext";
 import { Link } from "react-router-dom";
+import Checkout from "../Checkout/Checkout";
 import "./ShopList.css";
 
 const ShopList = () => {
@@ -40,18 +41,16 @@ const ShopList = () => {
             </tbody>
           </table>
         </Col>
-        <Col>
-          {conditional ? (
-            <div className="d-flex flex-column">
-              <span className="shop-clear">Carrito vacio</span>
-              <Link to="/tienda" className="shop-clear-btn">
-                ver tienda
-              </Link>
-            </div>
-          ) : (
-            ""
-          )}
-        </Col>
+        {conditional ? (
+          <Col className="d-flex flex-column">
+            <span className="shop-clear">Carrito vacio</span>
+            <Link to="/tienda" className="shop-clear-btn">
+              ver tienda
+            </Link>
+          </Col>
+        ) : (
+          <Checkout />
+        )}
       </Row>
     </Container>
   );

@@ -23,7 +23,14 @@ const CartProvider = ({ children }) => {
     console.log(cart);
   };
   // limpiar cart
-  const ClearCart = () => setCart([]);
+  const ClearCart = () => {
+    let isDelete = window.confirm(
+      `¿Estas seguro de eliminar todos los productos?`
+    );
+    if (isDelete) {
+      setCart([]);
+    }
+  };
   // saber si el producto esta en el carrito
   const isInCart = (id) => (cart.find((el) => el.id === id) ? true : false);
   // eliminar producto
