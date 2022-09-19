@@ -1,34 +1,23 @@
-import React, { useState, useContext } from "react";
-import { DataContext } from "../../context/DataContext";
+import React, { useContext } from "react";
+import { CartContext } from "../../context/CartContext";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faTrash } from "@fortawesome/free-solid-svg-icons";
 
-const ShopTable = ({ name, variety, count, price, id }) => {
-  const [totalItem, setTotalItem] = useState(count * price);
-  const { cartList, setCartList } = useContext(DataContext);
-
-  const deleteItem = () => {
-    let isDelete = window.confirm(
-      `¿Estas seguro de eliminar: '${name}' x ${count}?`
-    );
-
-    if (isDelete) {
-      let newList = cartList.filter((el) => el.id !== id);
-      setCartList(newList);
-    } else {
-      return;
-    }
-  };
+const ShopTable = ({ data }) => {
+  const { removeItem } = useContext(CartContext);
 
   return (
     <tr>
-      <td>{name}</td>
-      <td>{variety}</td>
-      <td>$ {price}</td>
-      <td>{count}</td>
-      <td>$ {totalItem}</td>
+      <td>{data.name}</td>
+      <td>{data.variety}</td>
+      <td>$ {data.price}</td>
+      <td>{data.quantity}</td>
+      <td>$ {data.quantity * data.price}</td>
       <td>
-        <button onClick={deleteItem} style={{ border: "none" }}>
+        <button
+          style={{ border: "none" }}
+          onClick={() => removeItem(data.id, data.name)}
+        >
           <FontAwesomeIcon icon={faTrash} style={{ color: "#b2936d" }} />
         </button>
       </td>

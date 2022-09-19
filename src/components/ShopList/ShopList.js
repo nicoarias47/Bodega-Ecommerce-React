@@ -1,11 +1,19 @@
-import React, { useContext } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import ShopTable from "../ShopTable/ShopTable";
-import { DataContext } from "../../context/DataContext";
+import { CartContext } from "../../context/CartContext";
+import { Link } from "react-router-dom";
 import "./ShopList.css";
 
 const ShopList = () => {
-  const { cartList } = useContext(DataContext);
+  const { cart } = useContext(CartContext);
+  const [conditional, setConditional] = useState(false);
+
+  let load = cart.length;
+
+  useEffect(() => {
+    load <= 0 ? setConditional(true) : setConditional(false);
+  }, [load]);
 
   return (
     <Container fluid="lg">
@@ -26,24 +34,23 @@ const ShopList = () => {
               </tr>
             </thead>
             <tbody>
-              {cartList.length === 0 ? (
-                <tr>
-                  <h3 className="shop-clear">Carrito vacio</h3>
-                </tr>
-              ) : (
-                cartList.map((el, i) => (
-                  <ShopTable
-                    key={i}
-                    name={el.name}
-                    variety={el.variety}
-                    price={el.price}
-                    count={el.count}
-                    id={el.id}
-                  />
-                ))
-              )}
+              {cart.length === 0
+                ? undefined
+                : cart.map((el) => <ShopTable key={el.id} data={el} />)}
             </tbody>
           </table>
+        </Col>
+        <Col>
+          {conditional ? (
+            <div className="d-flex flex-column">
+              <span className="shop-clear">Carrito vacio</span>
+              <Link to="/tienda" className="shop-clear-btn">
+                ver tienda
+              </Link>
+            </div>
+          ) : (
+            ""
+          )}
         </Col>
       </Row>
     </Container>

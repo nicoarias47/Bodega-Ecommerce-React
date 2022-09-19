@@ -1,49 +1,43 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
 import { Row, Col } from "react-bootstrap";
-import BtnAddCart from "../BtnAddCart/BtnAddCart";
+import { CartContext } from "../../context/CartContext";
 import "./ItemCount.css";
 
-const ItemCount = ({ stock, price, countU, name, variety, id }) => {
-  const [count, setCount] = useState(countU);
-  const [stockCard, setStockCard] = useState(stock);
+const ItemCount = ({ stock, initial, price, data }) => {
+  const [count, setCount] = useState(initial);
+  const { addItem } = useContext(CartContext);
 
-  const sumar = () => {
-    if (stockCard > 0) {
-      setCount(count + 1);
-      setStockCard(stockCard - 1);
-    }
+  const onAdd = (quantity) => {
+    addItem(data, quantity);
   };
 
-  const restar = () => {
-    if (stockCard < stock) {
-      setCount(count - 1);
-      setStockCard(stockCard + 1);
-    }
-  };
+  const sumar = () => setCount(count + 1);
+  const restar = () => setCount(count - 1);
 
   return (
-    <Row className="d-flex flex-column">
+    <Row className="d-flex flex-column text-center">
       <Col className="py-1">
         <span className="info-price p-3">$ {price}</span>
-        <span className="info-price">Stock: {stockCard}</span>
+        <span className="info-price">Stock: {stock} </span>
       </Col>
       <Col className="py-1">
-        <button className="btn-count" onClick={restar}>
+        <button className="btn-count" disabled={count <= 1} onClick={restar}>
           -
         </button>
-        <span className="info-count">{count}</span>
-        <button className="btn-count" onClick={sumar}>
+        <span className="info-count ">{count}</span>
+        <button className="btn-count" disabled={count >= stock} onClick={sumar}>
           +
         </button>
       </Col>
-      <BtnAddCart
-        price={price}
-        count={count}
-        name={name}
-        variety={variety}
-        setCount={setCount}
-        id={id}
-      />
+      <Col>
+        <button
+          className="btn-buy"
+          disabled={stock <= 0}
+          onClick={() => onAdd(count)}
+        >
+          Agregar
+        </button>
+      </Col>
     </Row>
   );
 };

@@ -1,0 +1,15 @@
+.count-widget-cart {
+  color: whitesmoke;
+  position: relative;
+  background-color: #b2936d;
+  font-size: 0.7rem;
+  border-radius: 100%;
+  padding: 3px 6px;
+  text-align: center;
+  bottom: -5px;
+  left: -40px;
+}
+
+.count-widget-cart:focus {
+  box-shadow: none;
+}
