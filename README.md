@@ -1,7 +1,9 @@
-# Bodega de Vino - Proyecto Ecommerce para CoderHouse
+# Bodega de Vinos - Proyecto Ecommerce para CoderHouse
+
+### Esta rama representa un desafío de CoderHouse en el cual se solicitaba la utilización de Context
 
 ## Para comenzar utilizar:
 
-npm run start
+### npm run start
 
-json-server -w -p 5000 ./src/data/db.json
+### npm run api

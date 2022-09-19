@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import Container from "react-bootstrap/Container";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
-import logoImg from "../../img/logo.png";
+import logoImg from "../../assets/logo.png";
 import CartWidget from "../CartWidget/CartWidget";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./NavBar.css";
@@ -11,9 +11,9 @@ import "./NavBar.css";
 const NavBar = () => {
   return (
     <Navbar expand="md" className="nav-bar">
-      <Container fluid="lg" className="containerasd">
+      <Container fluid="lg">
         <Link to="/" className="navbar-brand">
-          <img src={logoImg} />
+          <img src={logoImg} alt="Logo" />
         </Link>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">

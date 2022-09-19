@@ -1,5 +1,6 @@
 import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import CartProvider from "./context/CartContext";
 
 //COMPONENTS
 import NavBar from "./components/NavBar/NavBar";
@@ -17,7 +18,7 @@ import "./App.css";
 
 function App() {
   return (
-    <>
+    <CartProvider>
       <Router>
         <NavBar />
         <Routes>
@@ -29,7 +30,7 @@ function App() {
         </Routes>
         <Footer />
       </Router>
-    </>
+    </CartProvider>
   );
 }
 
