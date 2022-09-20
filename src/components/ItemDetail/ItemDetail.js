@@ -7,7 +7,7 @@ const ItemDetail = ({ data }) => {
     <Container>
       <Row>
         <Col className="col-12 col-sm-6 img-vino">
-          <img src="https://placeimg.com/800/800/nature" alt={data.name} />
+          <img src={data.img} alt={data.name} />
         </Col>
         <Col className="col-12 col-sm-6 col-detail d-flex flex-column justify-content-between">
           <div>

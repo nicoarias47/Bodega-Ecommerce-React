@@ -13,9 +13,9 @@ const Checkout = () => {
 
   return (
     <Col className="checkout">
-      <span className="checkout-title">Sub-total ${totalPrice()}</span>
-      <span className="checkout-title">envío $2300</span>
-      <span className="checkout-title">Sub-total ${totalPrice() + 2300}</span>
+      <span className="checkout-title">Subtotal ${totalPrice()}</span>
+      <span className="checkout-title">Envío $2300</span>
+      <span className="checkout-title">Total ${totalPrice() + 2300}</span>
       {minimum ? (
         <div>
           <button className="checkout-btn">Finalizar Compra</button>

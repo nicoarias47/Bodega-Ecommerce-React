@@ -2,7 +2,6 @@ import React from "react";
 import { Col, Card } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import ItemCount from "../ItemCount/ItemCount";
-
 import "./CardItem.css";
 
 function CardItem({ data }) {
