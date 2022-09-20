@@ -69,3 +69,22 @@
   flex-direction: column;
   justify-content: space-between;
 }
+
+@media (max-width: 768px) {
+  .panel-vinos {
+    justify-content: space-evenly;
+  }
+  .card {
+    width: 8rem;
+  }
+  .card-img-top {
+    max-width: 35%;
+  }
+  .card-title {
+    font-size: 1rem;
+  }
+
+  .card-variety {
+    font-size: 0.8rem;
+  }
+}
