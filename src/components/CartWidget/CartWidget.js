@@ -3,7 +3,6 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBagShopping } from "@fortawesome/free-solid-svg-icons";
 import { CartContext } from "../../context/CartContext";
 import "./CartWidget.css";
-
 const CartWidget = () => {
   const { totalItems } = useContext(CartContext);
   const [load, setLoad] = useState(false);

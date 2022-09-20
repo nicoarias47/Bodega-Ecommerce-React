@@ -3,7 +3,6 @@ import FilterPanel from "../FilterPanel/FitelPanel";
 import ItemList from "../ItemList/ItemList";
 import { Row, Col, Container } from "react-bootstrap";
 import Loading from "../Loading/Loading";
-
 const ItemListContainer = () => {
   const [vinos, setVinos] = useState([]);
 
