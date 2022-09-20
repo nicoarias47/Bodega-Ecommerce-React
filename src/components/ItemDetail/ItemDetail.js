@@ -3,11 +3,19 @@ import { Container, Row, Col } from "react-bootstrap";
 import "./ItemDetail.css";
 
 const ItemDetail = ({ data }) => {
+  const styleImg = {
+    backgroundImage: `url(../${data.img})`,
+    backgroundRepeat: "no-repeat",
+    backgroundSize: "contain",
+    backgroundPosition: "50%",
+    height: "100vh",
+  };
+
   return (
     <Container>
       <Row>
-        <Col className="col-12 col-sm-6 img-vino">
-          <img src={data.img} alt={data.name} />
+        <Col className="col-12 col-sm-6 img-vino" style={styleImg}>
+          {/* <img src={`../${data.img}`} alt={data.name} /> */}
         </Col>
         <Col className="col-12 col-sm-6 col-detail d-flex flex-column justify-content-between">
           <div>

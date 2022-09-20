@@ -1,6 +1,7 @@
 .img-vino img {
-  height: 85vh;
-  width: 100%;
+  width: 50%;
+  max-height: 100vh;
+  transform: scale(1.2);
 }
 
 .col-detail {
