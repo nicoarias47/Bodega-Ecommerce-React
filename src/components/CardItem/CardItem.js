@@ -1,7 +1,6 @@
 import React from "react";
 import { Col, Card } from "react-bootstrap";
 import { Link } from "react-router-dom";
-import ItemCount from "../ItemCount/ItemCount";
 import "./CardItem.css";
 
 function CardItem({ data }) {
@@ -18,13 +17,6 @@ function CardItem({ data }) {
             <Link to={`/detalle/${data.id}`} style={{ textDecoration: "none" }}>
               <Card.Text className="see-detail">Ver mas</Card.Text>
             </Link>
-            <ItemCount
-              stock={data.stock}
-              initial={1}
-              price={data.price}
-              id={data.id}
-              data={data}
-            />
           </Card.Body>
         </Card>
       </Col>

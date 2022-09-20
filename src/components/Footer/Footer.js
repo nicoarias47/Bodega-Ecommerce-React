@@ -1,6 +1,6 @@
 import React from "react";
 import { Container, Row, Col, FormGroup } from "react-bootstrap";
-import logo from "../../assets/logo.png";
+
 import "./Footer.css";
 
 const Footer = () => {
@@ -9,7 +9,7 @@ const Footer = () => {
       <Container className="container-footer">
         <Row className="d-flex justify-content-evenly">
           <Col className="footer-logo">
-            <img src={logo} alt="logo" className="logo" />
+            <img src="assets/logo.png" alt="logo" className="logo" />
           </Col>
           <Col className="d-flex flex-column">
             <h2 className="footer-title">Oficinas Buenos Aires</h2>

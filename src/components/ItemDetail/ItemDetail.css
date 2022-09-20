@@ -29,6 +29,10 @@
   border-top: 1px solid #b2936d;
 }
 
+.description-count {
+  padding-top: 2rem;
+}
+
 /* .description-footer span {
     padding-top: 1rem;
     border-bottom: 1px solid #b0b1b1;

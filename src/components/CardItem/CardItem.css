@@ -11,7 +11,7 @@
 }
 
 .card-img-top {
-  height: 16rem;
+  max-width: 35%;
   border-radius: 0;
 }
 

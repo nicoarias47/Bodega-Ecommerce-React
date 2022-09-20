@@ -1,5 +1,6 @@
 import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
+import ItemCount from "../ItemCount/ItemCount";
 import "./ItemDetail.css";
 
 const ItemDetail = ({ data }) => {
@@ -39,6 +40,15 @@ const ItemDetail = ({ data }) => {
             <div className="detail d-flex flex-row justify-content-between">
               <span className="tipo">Crianza:</span>
               <span className="tipo-dato">{data.breeding}</span>
+            </div>
+            <div className="description-count">
+              <ItemCount
+                stock={data.stock}
+                initial={1}
+                price={data.price}
+                id={data.id}
+                data={data}
+              />
             </div>
           </div>
         </Col>
