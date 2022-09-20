@@ -1,0 +1,35 @@
+.checkout {
+  background-color: #b2936d;
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  padding: 2rem;
+  font-family: "Montserrat", sans-serif;
+}
+
+.checkout-title {
+  font-size: 1.2rem;
+  font-weight: 400;
+}
+
+.checkout-btn {
+  display: block;
+  padding: 0.4rem 0.6rem;
+  margin-top: 1rem;
+  background-color: #2c3136;
+  color: #b2936d;
+  border: 1px solid #2c3136;
+}
+
+.checkout-btn:hover {
+  background-color: #b2936d;
+  color: whitesmoke;
+}
+
+.checkout-minimun {
+  margin-top: 2rem;
+  font-size: 1.5rem;
+  font-weight: 300;
+  color: #2c3136;
+  border: 1px solid #2c3136;
+}

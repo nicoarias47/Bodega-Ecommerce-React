@@ -1,13 +1,22 @@
 import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
+import ItemCount from "../ItemCount/ItemCount";
 import "./ItemDetail.css";
 
 const ItemDetail = ({ data }) => {
+  const styleImg = {
+    backgroundImage: `url(../${data.img})`,
+    backgroundRepeat: "no-repeat",
+    backgroundSize: "contain",
+    backgroundPosition: "50%",
+    height: "100vh",
+  };
+
   return (
     <Container>
       <Row>
-        <Col className="col-12 col-sm-6 img-vino">
-          <img src="https://placeimg.com/800/800/nature" alt={data.name} />
+        <Col className="col-12 col-sm-6 img-vino" style={styleImg}>
+          {/* <img src={`../${data.img}`} alt={data.name} /> */}
         </Col>
         <Col className="col-12 col-sm-6 col-detail d-flex flex-column justify-content-between">
           <div>
@@ -31,6 +40,15 @@ const ItemDetail = ({ data }) => {
             <div className="detail d-flex flex-row justify-content-between">
               <span className="tipo">Crianza:</span>
               <span className="tipo-dato">{data.breeding}</span>
+            </div>
+            <div className="description-count">
+              <ItemCount
+                stock={data.stock}
+                initial={1}
+                price={data.price}
+                id={data.id}
+                data={data}
+              />
             </div>
           </div>
         </Col>
