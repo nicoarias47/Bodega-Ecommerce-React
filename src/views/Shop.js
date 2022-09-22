@@ -1,10 +1,10 @@
 import React from "react";
-import ItemListContainer from "../components/ItemListContainer/ItemListContainer";
+import ItemListContainer2 from "../components/ItemListContainer/ItemListContainer2";
 
 const Shop = () => {
   return (
     <>
-      <ItemListContainer />
+      <ItemListContainer2 />
     </>
   );
 };

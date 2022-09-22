@@ -3,19 +3,14 @@ import FilterPanel from "../FilterPanel/FitelPanel";
 import ItemList from "../ItemList/ItemList";
 import { Row, Col, Container } from "react-bootstrap";
 import Loading from "../Loading/Loading";
+import { db } from "../../firebase/firebaseConfig";
 
-const ItemListContainer = () => {
+// Firebase
+import { collection, query, where, getDocs } from "firebase/firestore";
+// minuto 1.29
+
+const ItemListContainer2 = () => {
   const [vinos, setVinos] = useState([]);
-
-  useEffect(() => {
-    const getData = async (url) => {
-      let resp = await fetch(url);
-      let data = await resp.json();
-
-      setVinos(data);
-    };
-    getData("http://localhost:5000/vinos");
-  }, []);
 
   return (
     <Container className="py-5" fluid="lg">
@@ -29,4 +24,4 @@ const ItemListContainer = () => {
   );
 };
 
-export default ItemListContainer;
+export default ItemListContainer2;
