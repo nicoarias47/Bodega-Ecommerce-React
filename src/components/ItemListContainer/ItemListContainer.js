@@ -3,18 +3,27 @@ import FilterPanel from "../FilterPanel/FitelPanel";
 import ItemList from "../ItemList/ItemList";
 import { Row, Col, Container } from "react-bootstrap";
 import Loading from "../Loading/Loading";
+import { db } from "../../firebase/firebaseConfig";
+
+// Firebase
+import { collection, query, getDocs, where } from "firebase/firestore";
 
 const ItemListContainer = () => {
   const [vinos, setVinos] = useState([]);
+  const [variedad, setVariedad] = useState(null);
+
+  const getData = async () => {
+    const q = query(collection(db, "wines"));
+    const docs = [];
+    const querySnapshot = await getDocs(q);
+    querySnapshot.forEach((doc) => {
+      docs.push({ ...doc.data(), id: doc.id });
+    });
+    setVinos(docs);
+  };
 
   useEffect(() => {
-    const getData = async (url) => {
-      let resp = await fetch(url);
-      let data = await resp.json();
-
-      setVinos(data);
-    };
-    getData("http://localhost:5000/vinos");
+    getData();
   }, []);
 
   return (

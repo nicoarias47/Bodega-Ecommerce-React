@@ -5,7 +5,7 @@ import "./ItemDetail.css";
 
 const ItemDetail = ({ data }) => {
   const styleImg = {
-    backgroundImage: `url(../${data.img})`,
+    backgroundImage: `url(${data.img})`,
     backgroundRepeat: "no-repeat",
     backgroundSize: "contain",
     backgroundPosition: "50%",
