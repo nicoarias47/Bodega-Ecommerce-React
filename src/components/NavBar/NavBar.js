@@ -28,7 +28,7 @@ const NavBar = () => {
               Contacto
             </Link>
           </Nav>
-          <Link to="/carrito">
+          <Link to="/carrito" style={{ textDecoration: "none" }}>
             <CartWidget />
           </Link>
         </Navbar.Collapse>

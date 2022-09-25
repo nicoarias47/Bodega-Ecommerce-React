@@ -12,6 +12,7 @@ import Home from "./views/Home";
 import Shop from "./views/Shop";
 import Contact from "./views/Contact";
 import ItemDetailContainer from "./components/ItemDetailContainer/ItemDetailContainer";
+import Error404 from "./views/Error404";
 
 // CSS
 import "./App.css";
@@ -27,6 +28,7 @@ function App() {
           <Route path="/contacto" element={<Contact />} />
           <Route path="/detalle/:id" element={<ItemDetailContainer />} />
           <Route path="/carrito" element={<ShopList />} />
+          <Route path="*" element={<Error404 />} />
         </Routes>
         <Footer />
       </Router>
