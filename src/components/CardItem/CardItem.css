@@ -15,15 +15,11 @@
   border-radius: 0;
 }
 
-.see-detail {
-  color: #b2936d;
+.card-price {
+  color: #2c3136;
   font-family: "Lato", sans-serif;
   font-weight: 400;
   font-size: 0.8rem;
-}
-
-.see-detail:hover {
-  color: #b2936d80;
 }
 
 .btn-buy {

@@ -30,18 +30,13 @@
   margin: 1rem 0;
 }
 
-.filter span {
-  display: block;
-  font-size: 0.9rem;
-  font-weight: 400;
-  cursor: pointer;
-  margin: 0.2rem 0;
-}
-
-.filter h4:hover {
+.filter h4 a:hover,
+h3 a:hover,
+h4:hover {
   color: #b2936d;
 }
 
-.filter span:hover {
-  color: #b2936d;
+.filter a {
+  text-decoration: none;
+  color: #474747;
 }

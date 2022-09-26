@@ -7,17 +7,17 @@ const CartWidget = () => {
   const { totalItems } = useContext(CartContext);
   const [load, setLoad] = useState(false);
 
-  let loading = totalItems();
+  let itemsAmount = totalItems();
 
   useEffect(() => {
-    loading > 0 ? setLoad(true) : setLoad(false);
-  }, [loading]);
+    itemsAmount > 0 ? setLoad(true) : setLoad(false);
+  }, [itemsAmount]);
 
   return (
     <div style={{ color: "#b2936d", fontSize: "2.4rem" }}>
       <FontAwesomeIcon icon={faBagShopping} />
 
-      {load ? <span className="count-widget-cart">{loading}</span> : ""}
+      {load ? <span className="count-widget-cart">{itemsAmount}</span> : ""}
     </div>
   );
 };

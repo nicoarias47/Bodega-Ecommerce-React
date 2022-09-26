@@ -1,25 +1,33 @@
 import React from "react";
 import { Col } from "react-bootstrap";
+import { Link } from "react-router-dom";
 import "./FilterPanel.css";
 
 const FilterPanel = () => {
   return (
     <Col className="col-12 col-sm-6 col-md-4 filter">
       <h1>Filtrar por</h1>
-      <h3>Vinos</h3>
-      <h4 className="filter-red">Tintos</h4>
-      <span>Malbec</span>
-      <span>Blend</span>
-      <span>Cabernet Sauvignon</span>
-      <span>Syrah</span>
-      <h4 className="filter-white">Blancos</h4>
-      <h3>Crianza</h3>
-      <span>12 meses</span>
-      <span>18 meses</span>
-      <span>24 meses</span>
+      <h3>
+        <Link to="/tienda">Vinos</Link>
+      </h3>
+      <h4>
+        <Link to="/tienda/malbec">Malbec</Link>
+      </h4>
+      <h4>
+        <Link to="/tienda/blend">Blend</Link>
+      </h4>
+      <h4>
+        <Link to="/tienda/cabernet">Cabernet Sauvignon</Link>
+      </h4>
+      <h4>
+        <Link to="/tienda/syrah">Syrah</Link>
+      </h4>
+      <h4>
+        <Link to="/tienda/blanco">Blanco</Link>
+      </h4>
       <h3>Precio</h3>
-      <span>Mayor precio</span>
-      <span>Menor precio</span>
+      <h4>Mayor precio</h4>
+      <h4>Menor precio</h4>
     </Col>
   );
 };
