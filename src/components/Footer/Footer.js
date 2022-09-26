@@ -1,5 +1,5 @@
 import React from "react";
-import { Container, Row, Col, FormGroup } from "react-bootstrap";
+import { Container, Row, Col } from "react-bootstrap";
 
 import "./Footer.css";
 
@@ -33,7 +33,30 @@ const Footer = () => {
             <span className="footer-description">info@wines.com</span>
           </Col>
         </Row>
-        <Row className="text-center pt-5">
+        <Row className="text-center pt-5 d-flex flex-column">
+          <Col className="footer-social">
+            <a
+              href="https://github.com/nicoarias47"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <i class="fa-brands fa-github"></i>
+            </a>
+            <a
+              href="https://www.linkedin.com/in/dev-nicolasarias/"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <i class="fa-brands fa-linkedin-in"></i>
+            </a>
+            <a
+              href="https://github.com/nicoarias47"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <i class="fa-brands fa-instagram"></i>
+            </a>
+          </Col>
           <Col>
             <span className="footer-derechos">
               ® Soul Wines 2022, todos los derechos reservados.

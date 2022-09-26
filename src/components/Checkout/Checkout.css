@@ -33,3 +33,21 @@
   color: #2c3136;
   border: 1px solid #2c3136;
 }
+
+.checkout-minimun-btn {
+  margin-top: 1rem;
+  width: 150px;
+  padding: 0.4rem 0;
+  font-size: 1.1rem;
+  font-weight: 400;
+  background-color: #2c3136;
+  color: #b2936d;
+  border: 1px solid #2c3136;
+  text-decoration: none;
+  text-align: center;
+}
+
+.checkout-minimun-btn:hover {
+  background-color: #b2936d;
+  color: #2c3136;
+}

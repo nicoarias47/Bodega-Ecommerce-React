@@ -28,3 +28,13 @@
   font-weight: 400;
   color: #b0b1b1;
 }
+
+.footer-social i {
+  font-size: 1.8rem;
+  color: #b2936d;
+  padding: 0.5rem;
+}
+
+.footer-social i:hover {
+  color: #ebc392;
+}
