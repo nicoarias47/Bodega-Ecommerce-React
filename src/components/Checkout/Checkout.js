@@ -7,10 +7,11 @@ import "./Checkout.css";
 const Checkout = () => {
   const { totalPrice, totalItems, ClearCart } = useContext(CartContext);
   const [minimum, setMinimum] = useState(false);
+  let total = totalItems();
 
   useEffect(() => {
-    totalItems() >= 6 ? setMinimum(true) : setMinimum(false);
-  }, [totalItems()]);
+    total >= 6 ? setMinimum(true) : setMinimum(false);
+  }, [total]);
 
   return (
     <Col className="checkout">

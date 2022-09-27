@@ -31,6 +31,9 @@ const NavBar = () => {
           <Link to="/carrito" style={{ textDecoration: "none" }}>
             <CartWidget />
           </Link>
+          <Link to="/login" style={{ textDecoration: "none", color: "yellow" }}>
+            Login
+          </Link>
         </Navbar.Collapse>
       </Container>
     </Navbar>
