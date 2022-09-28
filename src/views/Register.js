@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Col, Row, Container } from "react-bootstrap";
-
+import MessageError from "../components/MessageError/MessageError";
 import { Link, useNavigate } from "react-router-dom";
 import { useAuth } from "../context/AuthContext";
 
@@ -31,35 +31,46 @@ const Register = () => {
 
   return (
     <Container>
-      <Row className="my-5">
+      <Row>
         <Col></Col>
-        <Col>
-          {error}
-          <form onSubmit={handleSubmit}>
-            <div className="mb-2">
-              <label htmlFor="email">Email</label>
-              <input
-                type="email"
-                name="email"
-                placeholder="Email@ejemplo.com"
-                onChange={handleChange}
-              />
-            </div>
-            <div className="mb-2">
-              <label htmlFor="password">Password</label>
-              <input
-                type="password"
-                name="password"
-                id="password"
-                placeholder="******"
-                onChange={handleChange}
-              />
-            </div>
-            <button>Registrarse</button>
-          </form>
-          <span className="text-center py-2">
-            ¿Ya posee una cuenta? <Link to="/login">Iniciar Sesión</Link>
-          </span>
+        <Col className="col-12 col-sm-8 col-md-6 col-lg-4">
+          {error && <MessageError message={error} />}
+          <div className=" login d-flex flex-column justify-content-center ">
+            <span className="login-title text-center">Register</span>
+            <form onSubmit={handleSubmit}>
+              <div className="mb-2">
+                <label htmlFor="email" className="d-block">
+                  Email
+                </label>
+                <input
+                  type="email"
+                  name="email"
+                  placeholder="Email@ejemplo.com"
+                  onChange={handleChange}
+                  className="w-100"
+                />
+              </div>
+              <div className="mb-2">
+                <label htmlFor="password" className="d-block">
+                  Password
+                </label>
+                <input
+                  type="password"
+                  name="password"
+                  id="password"
+                  placeholder="******"
+                  onChange={handleChange}
+                  className="w-100"
+                />
+              </div>
+              <button className="mb-2 d-flex justify-content-between align-items-center">
+                Registrarse
+              </button>
+            </form>
+            <span className="text-center py-2 d-flex justify-content-between">
+              ¿Ya posee una cuenta? <Link to="/login">Iniciar Sesión</Link>
+            </span>
+          </div>
         </Col>
         <Col></Col>
       </Row>

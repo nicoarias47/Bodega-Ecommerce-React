@@ -13,10 +13,27 @@ body {
 /* Login */
 
 .login {
-  padding: 5rem 1rem 5rem 1rem;
+  margin: 2rem 0 2rem 0;
+  padding: 3rem 1rem 3rem 1rem;
   background-color: #b2936d;
-  height: 80vh;
   font-family: "Lato", sans-serif;
+  border: 1px solid #7d7f81;
+  box-shadow: -1px 1px 4px #7d7f81;
+}
+
+.login-title {
+  font-size: 2rem;
+  font-weight: 300;
+  font-family: "Cinzel", sans-serif;
+  letter-spacing: 1px;
+  color: #2c3136;
+}
+
+.login-forgot {
+  font-size: 1rem;
+  font-weight: 400;
+  font-family: "Montserrat", sans-serif;
+  color: #2c3136;
 }
 
 .login label {
@@ -28,7 +45,7 @@ body {
   padding: 0.2rem;
   border: 1px solid #7d7f81;
   background-color: #2c3136;
-  color: #f4f4f4;
+  color: #b2936d;
 }
 
 .login input:focus {
@@ -40,7 +57,7 @@ body {
   padding: 0.3rem 0.2rem;
   border: 1px solid #7d7f81;
   background-color: #2c3136;
-  color: #f4f4f4;
+  color: #7d7f81;
 }
 
 .login button:hover {
