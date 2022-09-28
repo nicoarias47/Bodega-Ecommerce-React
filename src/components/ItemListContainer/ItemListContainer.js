@@ -13,32 +13,17 @@ const ItemListContainer = () => {
   const [vinos, setVinos] = useState([]);
   const { categoryId } = useParams();
 
-  // const getData = async () => {
-  //   const q = query(collection(db, "wines"));
-  //   const qFilter = query(q, where("category", "==", categoryId));
-
-  //   if (categoryId) {
-  //     return getDocs(qFilter).then((resp) =>
-  //       setVinos(resp.docs.map((vino) => ({ id: vino.id, ...vino.data() })))
-  //     );
-  //   } else {
-  //     getDocs(q).then((resp) =>
-  //       setVinos(resp.docs.map((vino) => ({ id: vino.id, ...vino.data() })))
-  //     );
-  //   }
-  // };
-
   useEffect(() => {
-    const q = query(collection(db, "wines"));
+    const q = collection(db, "wines");
 
     if (categoryId) {
       const qFilter = query(q, where("category", "==", categoryId));
       getDocs(qFilter).then((resp) =>
-        setVinos(resp.docs.map((vino) => ({ id: vino.id, ...vino.data() })))
+        setVinos(resp.docs.map((vino) => ({ ...vino.data(), id: vino.id })))
       );
     } else {
       getDocs(q).then((resp) =>
-        setVinos(resp.docs.map((vino) => ({ id: vino.id, ...vino.data() })))
+        setVinos(resp.docs.map((vino) => ({ ...vino.data(), id: vino.id })))
       );
     }
   }, [categoryId]);

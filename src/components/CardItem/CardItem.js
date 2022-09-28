@@ -9,9 +9,9 @@ function CardItem({ data }) {
     <>
       <Link to={`/detalle/${data.id}`} style={{ textDecoration: "none" }}>
         <Card className="d-flex align-items-stretch">
-          <Link to={`/detalle/${data.id}`}>
+          <div>
             <Card.Img variant="top" src={data.img} />
-          </Link>
+          </div>
           <Card.Body>
             <Card.Title className="card-title">{data.name}</Card.Title>
             <Card.Text className="card-variety">{data.variety}</Card.Text>

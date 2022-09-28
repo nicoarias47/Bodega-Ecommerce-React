@@ -18,10 +18,10 @@ import Login from "./views/Login";
 import Register from "./views/Register";
 import ForgotPassword from "./views/ForgotPassword";
 import Error404 from "./views/Error404";
+import { ProtectedRoute } from "./components/ProtectedRoute/ProtectedRoute";
 
 // CSS
 import "./App.css";
-import { ProtectedRoute } from "./components/ProtectedRoute/ProtectedRoute";
 
 function App() {
   return (

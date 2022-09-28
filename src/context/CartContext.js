@@ -20,7 +20,6 @@ const CartProvider = ({ children }) => {
     } else {
       setCart([...cart, { ...item, quantity }]);
     }
-    console.log(cart);
   };
   // limpiar cart
   const ClearCart = () => {
