@@ -1,13 +1,25 @@
 import React from "react";
-import { Container, Row } from "react-bootstrap";
+import { Container, Row, Col } from "react-bootstrap";
+import { useAuth } from "../context/AuthContext";
 
 const Perfil = () => {
+  const { user, loading, logOut } = useAuth();
+
+  const handleLogout = () => {
+    logOut();
+  };
+
+  if (loading) return <h1>Loading</h1>;
+
   return (
     <Container>
       <Row>
         <Col>
-          <h1>Usuario:</h1>
-          <button>Cerrar sesión</button>
+          <Col>
+            <h1>Bienvenido {user.email}</h1>
+            {user.photoURL && <img src={user.photoURL} alt="foto de perfil" />}
+          </Col>
+          <button onClick={handleLogout}>Cerrar sesión</button>
         </Col>
       </Row>
     </Container>

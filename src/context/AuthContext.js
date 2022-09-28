@@ -26,6 +26,18 @@ export function AuthProvider({ children }) {
   const login = async (email, password) =>
     signInWithEmailAndPassword(auth, email, password);
 
+  const singUp = async (email, password) =>
+    createUserWithEmailAndPassword(auth, email, password);
+
+  const logOut = async () => signOut(auth);
+
+  const loginWithGoogle = async () => {
+    const googleProvider = new GoogleAuthProvider();
+    return signInWithPopup(auth, googleProvider);
+  };
+
+  const resetPassword = (email) => sendPasswordResetEmail(auth, email);
+
   useEffect(() => {
     const unSuscribe = onAuthStateChanged(auth, (currentUser) => {
       setUser(currentUser);
@@ -33,8 +45,19 @@ export function AuthProvider({ children }) {
     });
     return () => unSuscribe();
   }, []);
+
   return (
-    <authContext.Provider value={{ user, login }}>
+    <authContext.Provider
+      value={{
+        user,
+        login,
+        loading,
+        singUp,
+        logOut,
+        loginWithGoogle,
+        resetPassword,
+      }}
+    >
       {children}
     </authContext.Provider>
   );

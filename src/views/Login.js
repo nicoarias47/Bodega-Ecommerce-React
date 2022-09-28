@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Col, Row, Container } from "react-bootstrap";
-import Form from "react-bootstrap/Form";
+
 import { Link, useNavigate } from "react-router-dom";
 import { useAuth } from "../context/AuthContext";
 
@@ -11,7 +11,7 @@ const Login = () => {
   });
   const [error, setError] = useState();
 
-  const { login } = useAuth();
+  const { login, loginWithGoogle } = useAuth();
   const navigate = useNavigate();
   const handleChange = ({ target: { name, value } }) => {
     setUser({ ...user, [name]: value });
@@ -22,62 +22,57 @@ const Login = () => {
     setError("");
     try {
       await login(user.email, user.password);
-      navigate("/tienda");
+      navigate("/perfil");
     } catch (error) {
       setError(error.message);
     }
   };
 
-  // hay que usar un protector de rutas
+  const handleGoogleLogin = async () => {
+    setError("");
+    try {
+      await loginWithGoogle();
+      navigate("/perfil");
+    } catch (error) {
+      setError(error.message);
+    }
+  };
+
   return (
     <Container>
       <Row className="my-5">
         <Col></Col>
         <Col>
+          {error}
           <form onSubmit={handleSubmit}>
-            <Form.Floating className="mb-3">
-              <Form.Control
-                id="floatingInputCustom"
+            <div className="mb-2">
+              <label htmlFor="email">Email</label>
+              <input
                 type="email"
-                placeholder="name@example.com"
                 name="email"
+                placeholder="Email@ejemplo.com"
                 onChange={handleChange}
               />
-              <label htmlFor="floatingInputCustom" style={{ color: "black" }}>
-                Email Adress
-              </label>
-            </Form.Floating>
-            <Form.Floating className="mb-3">
-              <Form.Control
-                id="floatingPasswordCustom"
+            </div>
+            <div className="mb-2">
+              <label htmlFor="password">Password</label>
+              <input
                 type="password"
-                placeholder="Password"
                 name="password"
+                id="password"
+                placeholder="******"
                 onChange={handleChange}
               />
-              <label
-                htmlFor="floatingPasswordCustom"
-                style={{ color: "black" }}
-              >
-                Password
-              </label>
-            </Form.Floating>
-            <Col className="d-flex justify-content-between">
-              <button>Iniciar sesión</button>
-              <a
-                href="#"
-                className="inline-block align-baseline font-bold text-sm text-blue-500 hover:text-blue-800"
-              >
-                Olvidaste tu contraseña?
-              </a>
-            </Col>
+            </div>
+            <div>
+              <button>Iniciar Sesión</button>
+              <Link to="/forgotpassword">¿Olvidaste tu contraseña?</Link>
+            </div>
           </form>
-          <Col className="d-flex flex-column pt-2">
-            <button className="py-1">Iniciar sesión con Google</button>
-            <span className="text-center py-2">
-              ¿No tienes cuenta? <Link to="/register">Registrate</Link>
-            </span>
-          </Col>
+          <button onClick={handleGoogleLogin}>Iniciar Sesión con Google</button>
+          <span className="text-center py-2">
+            ¿No posees una cuenta? <Link to="/register">Registrarse</Link>
+          </span>
         </Col>
         <Col></Col>
       </Row>
