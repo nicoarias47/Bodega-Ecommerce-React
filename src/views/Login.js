@@ -40,37 +40,43 @@ const Login = () => {
 
   return (
     <Container>
-      <Row className="my-5">
+      <Row>
         <Col></Col>
-        <Col>
+        <Col className="col-12 col-sm-8 col-md-6 col-lg-4 login d-flex flex-column justify-content-center ">
           {error}
           <form onSubmit={handleSubmit}>
             <div className="mb-2">
-              <label htmlFor="email">Email</label>
+              <label htmlFor="email" className="d-block">
+                Email
+              </label>
               <input
                 type="email"
                 name="email"
                 placeholder="Email@ejemplo.com"
                 onChange={handleChange}
+                className="w-100"
               />
             </div>
-            <div className="mb-2">
-              <label htmlFor="password">Password</label>
+            <div className="mb-4">
+              <label htmlFor="password" className="d-block">
+                Password
+              </label>
               <input
                 type="password"
                 name="password"
                 id="password"
                 placeholder="******"
                 onChange={handleChange}
+                className="w-100"
               />
             </div>
-            <div>
+            <div className="mb-2 d-flex justify-content-between">
               <button>Iniciar Sesión</button>
               <Link to="/forgotpassword">¿Olvidaste tu contraseña?</Link>
             </div>
           </form>
           <button onClick={handleGoogleLogin}>Iniciar Sesión con Google</button>
-          <span className="text-center py-2">
+          <span className="text-center py-2 d-flex justify-content-between">
             ¿No posees una cuenta? <Link to="/register">Registrarse</Link>
           </span>
         </Col>

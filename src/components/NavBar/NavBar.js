@@ -4,10 +4,13 @@ import Container from "react-bootstrap/Container";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
 import CartWidget from "../CartWidget/CartWidget";
+import { useAuth } from "../../context/AuthContext";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./NavBar.css";
 
 const NavBar = () => {
+  const { user } = useAuth();
+
   return (
     <Navbar expand="md" className="nav-bar">
       <Container fluid="lg">
@@ -31,9 +34,24 @@ const NavBar = () => {
           <Link to="/carrito" style={{ textDecoration: "none" }}>
             <CartWidget />
           </Link>
-          <Link to="/login" style={{ textDecoration: "none", color: "yellow" }}>
+          {!user ? (
+            <Link
+              to="/login"
+              style={{ textDecoration: "none", color: "yellow" }}
+            >
+              Login
+            </Link>
+          ) : (
+            <Link
+              to="/login"
+              style={{ textDecoration: "none", color: "yellow" }}
+            >
+              Perfil
+            </Link>
+          )}
+          {/* <Link to="/login" style={{ textDecoration: "none", color: "yellow" }}>
             Login
-          </Link>
+          </Link> */}
         </Navbar.Collapse>
       </Container>
     </Navbar>
