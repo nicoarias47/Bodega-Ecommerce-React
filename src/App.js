@@ -18,7 +18,10 @@ import Login from "./views/Login";
 import Register from "./views/Register";
 import ForgotPassword from "./views/ForgotPassword";
 import Error404 from "./views/Error404";
-import { ProtectedRoute } from "./components/ProtectedRoute/ProtectedRoute";
+import {
+  ProtectedRoute,
+  ProtectedRouteLoged,
+} from "./components/ProtectedRoute/ProtectedRoute";
 
 // CSS
 import "./App.css";
@@ -44,9 +47,30 @@ function App() {
                 </ProtectedRoute>
               }
             />
-            <Route path="/login" element={<Login />} />
-            <Route path="/register" element={<Register />} />
-            <Route path="/forgotpassword" element={<ForgotPassword />} />
+            <Route
+              path="/login"
+              element={
+                <ProtectedRouteLoged>
+                  <Login />
+                </ProtectedRouteLoged>
+              }
+            />
+            <Route
+              path="/register"
+              element={
+                <ProtectedRouteLoged>
+                  <Register />
+                </ProtectedRouteLoged>
+              }
+            />
+            <Route
+              path="/forgotpassword"
+              element={
+                <ProtectedRouteLoged>
+                  <ForgotPassword />
+                </ProtectedRouteLoged>
+              }
+            />
             <Route path="*" element={<Error404 />} />
           </Routes>
           <Footer />

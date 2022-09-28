@@ -1,15 +1,9 @@
-import React, { useState, useContext } from "react";
+import React, { useState } from "react";
 import { Row, Col } from "react-bootstrap";
-import { CartContext } from "../../context/CartContext";
 import "./ItemCount.css";
 
-const ItemCount = ({ stock, initial, price, data }) => {
+const ItemCount = ({ stock, initial, price, onAdd }) => {
   const [count, setCount] = useState(initial);
-  const { addItem } = useContext(CartContext);
-
-  const onAdd = (quantity) => {
-    addItem(data, quantity);
-  };
 
   const sumar = () => setCount(count + 1);
   const restar = () => setCount(count - 1);

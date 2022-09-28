@@ -12,3 +12,11 @@ export const ProtectedRoute = ({ children }) => {
 
   return <>{children}</>;
 };
+
+export const ProtectedRouteLoged = ({ children }) => {
+  const { user } = useAuth();
+
+  if (user) return <Navigate to="/perfil" />;
+
+  return <>{children}</>;
+};

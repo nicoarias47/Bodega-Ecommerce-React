@@ -1,9 +1,14 @@
-import React from "react";
+import React, { useContext, useState } from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import ItemCount from "../ItemCount/ItemCount";
+import { CartContext } from "../../context/CartContext";
 import "./ItemDetail.css";
+import { Link } from "react-router-dom";
 
 const ItemDetail = ({ data }) => {
+  const { addItem } = useContext(CartContext);
+  const [loading, setLoading] = useState(false);
+
   const styleImg = {
     backgroundImage: `url(${data.img})`,
     backgroundRepeat: "no-repeat",
@@ -12,12 +17,15 @@ const ItemDetail = ({ data }) => {
     height: "100vh",
   };
 
+  const onAdd = (quantity) => {
+    addItem(data, quantity);
+    setLoading(true);
+  };
+
   return (
     <Container>
       <Row>
-        <Col className="col-12 col-sm-6 img-vino" style={styleImg}>
-          {/* <img src={`../${data.img}`} alt={data.name} /> */}
-        </Col>
+        <Col className="col-12 col-sm-6 img-vino" style={styleImg}></Col>
         <Col className="col-12 col-sm-6 col-detail d-flex flex-column justify-content-between">
           <div>
             <span className="marca">Soul</span>
@@ -42,13 +50,33 @@ const ItemDetail = ({ data }) => {
               <span className="tipo-dato">{data.breeding}</span>
             </div>
             <div className="description-count">
-              <ItemCount
-                stock={data.stock}
-                initial={1}
-                price={data.price}
-                id={data.id}
-                data={data}
-              />
+              {loading ? (
+                <Col className="d-flex flex-column">
+                  <Link
+                    className="btn-count my-2 py-2"
+                    to="/tienda"
+                    style={{ textDecoration: "none", textAlign: "center" }}
+                  >
+                    Seguir comprando
+                  </Link>
+                  <Link
+                    className="btn-count my-2 py-2"
+                    to="/carrito"
+                    style={{ textDecoration: "none", textAlign: "center" }}
+                  >
+                    Finalizar Compra
+                  </Link>
+                </Col>
+              ) : (
+                <ItemCount
+                  stock={data.stock}
+                  initial={1}
+                  price={data.price}
+                  id={data.id}
+                  data={data}
+                  onAdd={onAdd}
+                />
+              )}
             </div>
           </div>
         </Col>
