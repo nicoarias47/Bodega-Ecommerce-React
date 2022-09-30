@@ -81,7 +81,7 @@ const Login = () => {
               onClick={handleGoogleLogin}
               className="d-flex justify-content-around align-items-center"
             >
-              <i class="fa-brands fa-google"></i>
+              <i className="fa-brands fa-google"></i>
               <div>Iniciar Sesión con Google</div>
               <div></div>
             </button>

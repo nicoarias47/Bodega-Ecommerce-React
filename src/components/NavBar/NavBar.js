@@ -31,27 +31,30 @@ const NavBar = () => {
               Contacto
             </Link>
           </Nav>
-          <Link to="/carrito" style={{ textDecoration: "none" }}>
-            <CartWidget />
-          </Link>
-          {!user ? (
-            <Link
-              to="/login"
-              style={{ textDecoration: "none", color: "yellow" }}
-            >
-              Login
+          <div className="d-flex align-items-baseline">
+            <Link to="/carrito" style={{ textDecoration: "none" }}>
+              <CartWidget />
             </Link>
-          ) : (
-            <Link
-              to="/login"
-              style={{ textDecoration: "none", color: "yellow" }}
-            >
-              Perfil
-            </Link>
-          )}
-          {/* <Link to="/login" style={{ textDecoration: "none", color: "yellow" }}>
-            Login
-          </Link> */}
+            <div className="px-2">
+              {!user ? (
+                <Link
+                  to="/login"
+                  style={{ textDecoration: "none" }}
+                  className="nav-link"
+                >
+                  Login
+                </Link>
+              ) : (
+                <Link
+                  to="/login"
+                  style={{ textDecoration: "none" }}
+                  className="nav-link"
+                >
+                  Perfil
+                </Link>
+              )}
+            </div>
+          </div>
         </Navbar.Collapse>
       </Container>
     </Navbar>

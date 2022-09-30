@@ -50,24 +50,7 @@ const ItemDetail = ({ data }) => {
               <span className="tipo-dato">{data.breeding}</span>
             </div>
             <div className="description-count">
-              {loading ? (
-                <Col className="d-flex flex-column">
-                  <Link
-                    className="btn-count my-2 py-2"
-                    to="/tienda"
-                    style={{ textDecoration: "none", textAlign: "center" }}
-                  >
-                    Seguir comprando
-                  </Link>
-                  <Link
-                    className="btn-count my-2 py-2"
-                    to="/carrito"
-                    style={{ textDecoration: "none", textAlign: "center" }}
-                  >
-                    Finalizar Compra
-                  </Link>
-                </Col>
-              ) : (
+              <div className="pb-4">
                 <ItemCount
                   stock={data.stock}
                   initial={1}
@@ -76,6 +59,34 @@ const ItemDetail = ({ data }) => {
                   data={data}
                   onAdd={onAdd}
                 />
+              </div>
+              {loading ? (
+                <Col className="d-flex flex-row justify-content-evenly gap-3">
+                  <Link
+                    className="btn-count my-1 py-2"
+                    to="/tienda"
+                    style={{
+                      textDecoration: "none",
+                      textAlign: "center",
+                      width: "100%",
+                    }}
+                  >
+                    Seguir comprando
+                  </Link>
+                  <Link
+                    className="btn-count my-1 py-2"
+                    to="/carrito"
+                    style={{
+                      textDecoration: "none",
+                      textAlign: "center",
+                      width: "100%",
+                    }}
+                  >
+                    Finalizar Compra
+                  </Link>
+                </Col>
+              ) : (
+                ""
               )}
             </div>
           </div>

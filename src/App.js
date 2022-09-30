@@ -6,7 +6,7 @@ import { AuthProvider } from "./context/AuthContext";
 //COMPONENTS
 import NavBar from "./components/NavBar/NavBar";
 import Footer from "./components/Footer/Footer";
-import ShopList from "./components/ShopList/ShopList";
+import Cart from "./components/Cart/Cart";
 
 //VIEWS
 import Home from "./views/Home";
@@ -25,6 +25,7 @@ import {
 
 // CSS
 import "./App.css";
+import Checkout from "./views/Checkout";
 
 function App() {
   return (
@@ -38,7 +39,7 @@ function App() {
             <Route path="/tienda/:categoryId" element={<Shop />} />
             <Route path="/contacto" element={<Contact />} />
             <Route path="/detalle/:id" element={<ItemDetailContainer />} />
-            <Route path="/carrito" element={<ShopList />} />
+            <Route path="/carrito" element={<Cart />} />
             <Route
               path="/perfil"
               element={
@@ -71,6 +72,7 @@ function App() {
                 </ProtectedRouteLoged>
               }
             />
+            <Route path="/checkout" element={<Checkout />} />
             <Route path="*" element={<Error404 />} />
           </Routes>
           <Footer />

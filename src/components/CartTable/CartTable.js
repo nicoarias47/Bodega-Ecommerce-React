@@ -3,7 +3,7 @@ import { CartContext } from "../../context/CartContext";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faTrash } from "@fortawesome/free-solid-svg-icons";
 
-const ShopTable = ({ data }) => {
+const CartTable = ({ data }) => {
   const { removeItem } = useContext(CartContext);
 
   return (
@@ -25,4 +25,4 @@ const ShopTable = ({ data }) => {
   );
 };
 
-export default ShopTable;
+export default CartTable;

@@ -1,12 +1,12 @@
 import React, { useContext, useEffect, useState } from "react";
 import { Container, Row, Col } from "react-bootstrap";
-import ShopTable from "../ShopTable/ShopTable";
 import { CartContext } from "../../context/CartContext";
 import { Link } from "react-router-dom";
-import Checkout from "../Checkout/Checkout";
-import "./ShopList.css";
+import CartDetail from "../CartDetail/CartDetail";
+import CartTable from "../CartTable/CartTable";
+import "./Cart.css";
 
-const ShopList = () => {
+const Cart = () => {
   const { cart } = useContext(CartContext);
   const [conditional, setConditional] = useState(false);
 
@@ -37,7 +37,7 @@ const ShopList = () => {
             <tbody>
               {cart.length === 0
                 ? undefined
-                : cart.map((el) => <ShopTable key={el.id} data={el} />)}
+                : cart.map((el) => <CartTable key={el.id} data={el} />)}
             </tbody>
           </table>
         </Col>
@@ -49,11 +49,11 @@ const ShopList = () => {
             </Link>
           </Col>
         ) : (
-          <Checkout />
+          <CartDetail />
         )}
       </Row>
     </Container>
   );
 };
 
-export default ShopList;
+export default Cart;

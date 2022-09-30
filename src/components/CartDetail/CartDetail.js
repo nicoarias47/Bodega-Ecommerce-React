@@ -2,9 +2,9 @@ import React, { useContext, useEffect, useState } from "react";
 import { Col } from "react-bootstrap";
 import { CartContext } from "../../context/CartContext";
 import { Link } from "react-router-dom";
-import "./Checkout.css";
+import "./CartDetail.css";
 
-const Checkout = () => {
+const CartDetail = () => {
   const { totalPrice, totalItems, ClearCart } = useContext(CartContext);
   const [minimum, setMinimum] = useState(false);
   let total = totalItems();
@@ -15,6 +15,7 @@ const Checkout = () => {
 
   return (
     <Col className="checkout">
+      <h2 className="shop-title">Detalle de su compra</h2>
       <span className="checkout-title">Subtotal ${totalPrice()}</span>
       <span className="checkout-title">Envío $2300</span>
       <span className="checkout-title">Total ${totalPrice() + 2300}</span>
@@ -39,4 +40,4 @@ const Checkout = () => {
   );
 };
 
-export default Checkout;
+export default CartDetail;

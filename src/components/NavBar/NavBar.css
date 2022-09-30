@@ -29,6 +29,15 @@
   width: 115px;
 }
 
+.nav-login {
+  color: whitesmoke;
+  text-transform: uppercase;
+}
+
+.nav-login:hover {
+  color: #b2936d;
+}
+
 @media (min-width: 768px) {
   #basic-navbar-nav {
     display: flex;

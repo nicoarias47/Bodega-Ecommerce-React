@@ -1,18 +1,18 @@
 .info-price {
   color: #7d7f81;
-  font-size: 0.9rem;
+  font-size: 1rem;
   font-family: "Lato", sans-serif;
 }
 
 .info-count {
   color: #2c3136;
-  font-size: 0.9rem;
+  font-size: 1rem;
   font-family: "Lato", sans-serif;
   padding: 1rem;
 }
 
 .btn-count {
-  padding: 0.1rem 0.4rem;
+  padding: 0.2rem 0.6rem;
   border: none;
   background-color: #2c3136;
   color: #b2936d;
