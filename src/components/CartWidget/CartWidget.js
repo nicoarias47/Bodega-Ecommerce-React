@@ -1,7 +1,7 @@
 import React, { useContext, useEffect, useState } from "react";
-
 import { CartContext } from "../../context/CartContext";
 import "./CartWidget.css";
+
 const CartWidget = () => {
   const { totalItems } = useContext(CartContext);
   const [load, setLoad] = useState(false);
