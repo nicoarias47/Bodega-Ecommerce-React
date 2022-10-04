@@ -21,7 +21,13 @@ const CartDetail = () => {
       <span className="checkout-title">Total ${totalPrice() + 2300}</span>
       {minimum ? (
         <div>
-          <button className="checkout-btn">Finalizar Compra</button>
+          <Link
+            to="/checkout"
+            className="checkout-btn"
+            style={{ textDecoration: "none" }}
+          >
+            Finalizar Compra
+          </Link>
           <button className="checkout-btn" onClick={ClearCart}>
             Limpiar carrito
           </button>

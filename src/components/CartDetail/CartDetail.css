@@ -19,14 +19,14 @@
   padding: 0.4rem 0.6rem;
   margin-top: 1rem;
   margin-right: 1rem;
-  background-color: #2c3136;
-  color: #b2936d;
+  background-color: #b2936d;
+  color: #2c3136;
   border: 1px solid #2c3136;
 }
 
 .checkout-btn:hover {
-  background-color: #b2936d;
-  color: whitesmoke;
+  background-color: #2c3136;
+  color: #b2936d;
 }
 
 .checkout-minimun {

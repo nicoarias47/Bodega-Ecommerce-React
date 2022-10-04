@@ -12,7 +12,7 @@ const Perfil = () => {
   if (loading) return <h1>Loading</h1>;
 
   return (
-    <Container>
+    <Container fluid="lg">
       <Row>
         <Col>
           <Col>

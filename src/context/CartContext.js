@@ -49,6 +49,21 @@ const CartProvider = ({ children }) => {
     return cart.reduce((acc, act) => acc + act.quantity, 0);
   };
 
+  // ordenar por precio
+
+  const menorPrecio = (array) => {
+    return array.sort((a, b) => {
+      if (a.price > b.price) {
+        return 1;
+      }
+      if (a.price < b.price) {
+        return -1;
+      }
+      //a===b
+      return 0;
+    });
+  };
+
   return (
     <CartContext.Provider
       value={{
@@ -59,6 +74,7 @@ const CartProvider = ({ children }) => {
         totalPrice,
         totalItems,
         cart,
+        menorPrecio,
       }}
     >
       {children}

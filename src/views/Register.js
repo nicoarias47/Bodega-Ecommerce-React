@@ -30,7 +30,7 @@ const Register = () => {
   };
 
   return (
-    <Container>
+    <Container fluid="lg">
       <Row>
         <Col></Col>
         <Col className="col-12 col-sm-8 col-md-6 col-lg-4">
