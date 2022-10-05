@@ -1,13 +1,13 @@
 import React from "react";
 import { Col, Container, Row } from "react-bootstrap";
-import CheckoutForm from "../components/CheckoutForm/CheckoutForm";
+import CheckoutContainer from "../components/CheckoutContainer/CheckoutContainer";
 
 const Checkout = () => {
   return (
     <Container fluid="lg">
       <Row>
         <Col></Col>
-        <CheckoutForm />
+        <CheckoutContainer />
         <Col></Col>
       </Row>
     </Container>

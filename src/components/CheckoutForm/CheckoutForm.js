@@ -1,55 +1,13 @@
-import React, { useState, useContext } from "react";
-import { CartContext } from "../../context/CartContext";
-import { Col } from "react-bootstrap";
-import { useAuth } from "../../context/AuthContext";
-import { collection, addDoc } from "firebase/firestore";
-import { db } from "../../firebase/firebaseConfig";
-import "./CheckoutForm.css";
+import React from "react";
 
-const initialState = {
-  name: "",
-  lastName: "",
-  province: "",
-  direction: "",
-  number: "",
-  tel: "",
-  email: "",
-};
-
-const CheckoutForm = () => {
-  const [order, setOrder] = useState(initialState);
-  const { user } = useAuth();
-  const { totalPrice, cart } = useContext(CartContext);
-
-  const handleChange = ({ target: { name, value } }) => {
-    setOrder({
-      ...order,
-      [name]: value,
-      email: user.email,
-      totalPrice: totalPrice() + 2300,
-      cart: cart.map((el) => ({
-        id: el.id,
-        name: el.name,
-        price: el.price,
-        quantity: el.quantity,
-        category: el.category,
-      })),
-    });
-  };
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-  };
-
-  const handleCancel = () => {};
-
-  const handleBuy = () => {
-    const q = collection(db, "orders");
-    addDoc(q, order).then(({ id }) => console.log(id));
-  };
-
+const CheckoutForm = ({
+  handleChange,
+  handleSubmit,
+  handleCancel,
+  handleBuy,
+}) => {
   return (
-    <Col className="formulario">
+    <>
       <h1 className="text-center">Checkout</h1>
       <form onSubmit={handleSubmit}>
         <div className="mb-2">
@@ -163,7 +121,7 @@ const CheckoutForm = () => {
         <button onClick={handleBuy}>Enviar</button>
       </form>
       <button onClick={handleCancel}>Cancelar</button>
-    </Col>
+    </>
   );
 };
 

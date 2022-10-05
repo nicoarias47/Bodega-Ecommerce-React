@@ -72,7 +72,14 @@ function App() {
                 </ProtectedRouteLoged>
               }
             />
-            <Route path="/checkout" element={<Checkout />} />
+            <Route
+              path="/checkout"
+              element={
+                <ProtectedRoute>
+                  <Checkout />
+                </ProtectedRoute>
+              }
+            />
             <Route path="*" element={<Error404 />} />
           </Routes>
           <Footer />

@@ -2,11 +2,14 @@ import React, { useContext, useEffect, useState } from "react";
 import { Col } from "react-bootstrap";
 import { CartContext } from "../../context/CartContext";
 import { Link } from "react-router-dom";
+import { useAuth } from "../../context/AuthContext";
 import "./CartDetail.css";
 
 const CartDetail = () => {
   const { totalPrice, totalItems, ClearCart } = useContext(CartContext);
   const [minimum, setMinimum] = useState(false);
+  const { user } = useAuth();
+
   let total = totalItems();
 
   useEffect(() => {

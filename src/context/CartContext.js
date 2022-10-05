@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Navigate } from "react-router-dom";
 
 export const CartContext = React.createContext([]);
 
@@ -28,6 +29,7 @@ const CartProvider = ({ children }) => {
     );
     if (isDelete) {
       setCart([]);
+      <Navigate to="/carrito" />;
     }
   };
   // saber si el producto esta en el carrito
