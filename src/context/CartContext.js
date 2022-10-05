@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Navigate } from "react-router-dom";
+import { SweetAlertWithCancel } from "../components/SweetAlert/SweetAlert";
 
 export const CartContext = React.createContext([]);
 
@@ -24,13 +24,15 @@ const CartProvider = ({ children }) => {
   };
   // limpiar cart
   const ClearCart = () => {
-    let isDelete = window.confirm(
-      `¿Estas seguro de eliminar todos los productos?`
-    );
-    if (isDelete) {
-      setCart([]);
-      <Navigate to="/carrito" />;
-    }
+    SweetAlertWithCancel({
+      title: "Vaciando carrito",
+      text: "¿Estas seguro?",
+      confirm() {
+        setCart([]);
+        window.location.href = `/carrito`;
+        //return <Navigate to="/" />;
+      },
+    });
   };
   // saber si el producto esta en el carrito
   const isInCart = (id) => (cart.find((el) => el.id === id) ? true : false);

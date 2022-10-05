@@ -1,8 +1,9 @@
 import React, { useContext, useEffect, useState } from "react";
 import { Col } from "react-bootstrap";
 import { CartContext } from "../../context/CartContext";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { useAuth } from "../../context/AuthContext";
+import { SweetAlertRedirect } from "../SweetAlert/SweetAlert";
 import "./CartDetail.css";
 
 const CartDetail = () => {
@@ -11,6 +12,18 @@ const CartDetail = () => {
   const { user } = useAuth();
 
   let total = totalItems();
+  let navigate = useNavigate();
+
+  const handleClick = () => {
+    if (!user)
+      return SweetAlertRedirect({
+        title: "Debes estar logeado para continuar",
+        text: "¿Ir al login?",
+        relocate: "login",
+      });
+
+    return navigate("/checkout");
+  };
 
   useEffect(() => {
     total >= 6 ? setMinimum(true) : setMinimum(false);
@@ -24,13 +37,9 @@ const CartDetail = () => {
       <span className="checkout-title">Total ${totalPrice() + 2300}</span>
       {minimum ? (
         <div>
-          <Link
-            to="/checkout"
-            className="checkout-btn"
-            style={{ textDecoration: "none" }}
-          >
+          <button className="checkout-btn" onClick={handleClick}>
             Finalizar Compra
-          </Link>
+          </button>
           <button className="checkout-btn" onClick={ClearCart}>
             Limpiar carrito
           </button>

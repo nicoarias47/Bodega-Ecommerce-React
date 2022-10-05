@@ -5,6 +5,8 @@ import { useAuth } from "../../context/AuthContext";
 import { collection, addDoc } from "firebase/firestore";
 import { db } from "../../firebase/firebaseConfig";
 import CheckoutForm from "../CheckoutForm/CheckoutForm";
+import { SweetAlertOnlyMsg } from "../SweetAlert/SweetAlert";
+import { Navigate } from "react-router";
 import "./CheckoutContainer.css";
 
 const initialState = {
@@ -48,9 +50,20 @@ const CheckoutContainer = () => {
     ClearCart();
   };
 
-  const handleBuy = () => {
-    const q = collection(db, "orders");
-    addDoc(q, order).then(({ id }) => console.log(id));
+  const handleBuy = async () => {
+    const q = await collection(db, "orders");
+    const add = await addDoc(q, order).then(({ id }) => id);
+
+    SweetAlertOnlyMsg({
+      title: "Gracias por su compra",
+      text: `Sera redirigido a su perfil, donde podra ver sus compras`,
+      footer: `id: ${add}`,
+    });
+
+    setTimeout(() => {
+      console.log("hola");
+      <Navigate to="/perfil" />;
+    }, 3000);
   };
 
   return (
