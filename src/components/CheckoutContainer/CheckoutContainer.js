@@ -53,6 +53,7 @@ const CheckoutContainer = () => {
 
   const handleCancel = () => {
     ClearCart();
+    setOrder(initialState);
   };
 
   const handleSubmit = (e) => {

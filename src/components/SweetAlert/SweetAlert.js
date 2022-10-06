@@ -46,5 +46,6 @@ export const SweetAlertOnlyMsg = ({ title, text, footer }) => {
     color: "#b2936d",
     background: "#2c3136",
     confirmButtonColor: "#b2936d",
+    confirmButtonText: "Aceptar",
   });
 };
