@@ -75,6 +75,11 @@ body {
   color: #7d7f81;
 }
 
+.test-user {
+  background-color: #b2936d;
+  box-shadow: -1px 1px 4px #2c313680;
+}
+
 /* PROFILE */
 
 .perfil_details {

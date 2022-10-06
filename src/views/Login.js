@@ -43,6 +43,11 @@ const Login = () => {
       <Row>
         <Col></Col>
         <Col className="col-12 col-sm-8 col-md-6 col-lg-4">
+          <div className="d-flex flex-column my-3 p-1 test-user">
+            <h4>Usuario de prueba</h4>
+            <span>Email: prueba@mail.com</span>
+            <span>Contraseña: 1234567</span>
+          </div>
           {error && <MessageError message={error} />}
           <div className=" login d-flex flex-column justify-content-center ">
             <span className="login-title text-center">Login</span>
