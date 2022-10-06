@@ -58,8 +58,7 @@ const CheckoutContainer = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     setErrors(CheckoutValidation(order));
-    // && Object.keys(cart).length > 0
-    if (Object.keys(errors).length === 0) {
+    if (Object.keys(errors).length === 0 && Object.keys(cart).length > 0) {
       setLoading(true);
       finalFunction();
     }
@@ -87,6 +86,13 @@ const CheckoutContainer = () => {
   return (
     <Col>
       {loading && <Loading />}
+      {Object.keys(cart).length <= 0 ? (
+        <span className="form-errorCart">
+          No posee items en el carro de compras
+        </span>
+      ) : (
+        ""
+      )}
       <div className="formulario">
         <CheckoutForm
           handleChange={handleChange}
