@@ -80,9 +80,13 @@ body {
   box-shadow: -1px 1px 4px #2c313680;
 }
 
+.test-user h4:hover {
+  color: #ffffff;
+}
+
 /* PROFILE */
 
-.perfil_details {
+.perfil {
   background-color: #b2936d;
 }
 
@@ -106,4 +110,13 @@ body {
 
 .perfil_details button:hover {
   background-color: #494f54;
+}
+
+.perfil-subtitle {
+  color: #b2936d;
+  font-family: "Cinzel", sans-serif;
+}
+
+.perfil-orders {
+  min-height: 70vh;
 }
