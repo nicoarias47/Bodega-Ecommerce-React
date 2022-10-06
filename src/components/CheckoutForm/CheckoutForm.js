@@ -4,7 +4,9 @@ const CheckoutForm = ({
   handleChange,
   handleSubmit,
   handleCancel,
-  handleBuy,
+  handleBlur,
+  errors,
+  order,
 }) => {
   return (
     <>
@@ -18,11 +20,14 @@ const CheckoutForm = ({
             name="name"
             id="name"
             type="text"
-            placeholder="Nicolas"
-            onChange={handleChange}
+            placeholder="Bruce"
             required
             className="w-100"
+            value={order.name}
+            onBlur={handleBlur}
+            onChange={handleChange}
           />
+          {errors.name && <span className="form-error">{errors.name}</span>}
         </div>
         <div className="mb-2">
           <label htmlFor="lastName" className="d-block">
@@ -32,25 +37,33 @@ const CheckoutForm = ({
             name="lastName"
             id="lastName"
             type="text"
-            placeholder="Arias"
-            onChange={handleChange}
-            required
+            placeholder="Wayne"
             className="w-100"
+            required
+            value={order.lastName}
+            onBlur={handleBlur}
+            onChange={handleChange}
           />
+          {errors.lastName && (
+            <span className="form-error">{errors.lastName}</span>
+          )}
         </div>
         <div className="mb-2">
           <label htmlFor="tel" className="d-block">
-            Tel
+            Tel---ej: 1188884444---
           </label>
           <input
             name="tel"
             id="tel"
             type="number"
-            placeholder="01154268112"
-            onChange={handleChange}
-            required
+            placeholder="1188884444"
             className="w-100"
+            required
+            value={order.tel}
+            onBlur={handleBlur}
+            onChange={handleChange}
           />
+          {errors.tel && <span className="form-error">{errors.tel}</span>}
         </div>
         <div className="mb-2">
           <label htmlFor="province" className="d-block">
@@ -59,35 +72,42 @@ const CheckoutForm = ({
           <select
             id="province"
             name="province"
-            onChange={handleChange}
             required
+            value={order.province}
+            onBlur={handleBlur}
+            onChange={handleChange}
           >
-            <option disabled>...</option>
-            <option>Buenos Aires</option>
-            <option>Ciudad Autónoma de Buenos Aires</option>
-            <option>Catamarca</option>
-            <option>Chaco</option>
-            <option>Chubut</option>
-            <option>Córdoba</option>
-            <option>Corrientes</option>
-            <option>Entre Ríos</option>
-            <option>Formosa</option>
-            <option>Jujuy</option>
-            <option>La Pampa</option>
-            <option>La Rioja</option>
-            <option>Mendoza</option>
-            <option>Misiones</option>
-            <option>Neuquen</option>
-            <option>Rio Negro</option>
-            <option>Salta</option>
-            <option>San Juan</option>
-            <option>San Luis</option>
-            <option>Santa Crunz</option>
-            <option>Santa Fe</option>
-            <option>Santiago del Estero</option>
-            <option>Tierra del Fuego</option>
-            <option>Tucuman</option>
+            <option value="">...</option>
+            <option value="Buenos Aires">Buenos Aires</option>
+            <option value="Ciudad Autónoma de Buenos Aires">
+              Ciudad Autónoma de Buenos Aires
+            </option>
+            <option value="Catamarca">Catamarca</option>
+            <option value="Chaco">Chaco</option>
+            <option value="Chubut">Chubut</option>
+            <option value="Córdoba">Córdoba</option>
+            <option value="Corrientes">Corrientes</option>
+            <option value="Entre Ríos">Entre Ríos</option>
+            <option value="Formosa">Formosa</option>
+            <option value="Jujuy">Jujuy</option>
+            <option value="La Pampa">La Pampa</option>
+            <option value="La Rioja">La Rioja</option>
+            <option value="Mendoza">Mendoza</option>
+            <option value="Misiones">Misiones</option>
+            <option value="Neuquen">Neuquen</option>
+            <option value="Rio Negro">Rio Negro</option>
+            <option value="Salta">Salta</option>
+            <option value="San Juan">San Juan</option>
+            <option value="San Luis">San Luis</option>
+            <option value="Santa Crunz">Santa Crunz</option>
+            <option value="Santa Fe">Santa Fe</option>
+            <option value="Santiago del Estero">Santiago del Estero</option>
+            <option value="Tierra del Fuego">Tierra del Fuego</option>
+            <option value="Tucuman">Tucuman</option>
           </select>
+          {errors.province && (
+            <span className="form-error">{errors.province}</span>
+          )}
         </div>
         <div className="d-flex justify-content-between gap-3 mb-2">
           <div>
@@ -99,8 +119,10 @@ const CheckoutForm = ({
               name="direction"
               id="direction"
               placeholder="Av. siempre viva"
-              onChange={handleChange}
               required
+              value={order.direction}
+              onBlur={handleBlur}
+              onChange={handleChange}
             />
           </div>
           <div>
@@ -113,12 +135,18 @@ const CheckoutForm = ({
               placeholder="346"
               className="w-100"
               min={0}
-              onChange={handleChange}
               required
+              value={order.number}
+              onBlur={handleBlur}
+              onChange={handleChange}
             />
           </div>
         </div>
-        <button onClick={handleBuy}>Enviar</button>
+        {errors.direction && (
+          <span className="form-error">{errors.direction}</span>
+        )}
+        {errors.number && <span className="form-error">{errors.number}</span>}
+        <input type="submit" value="Finalizar Compra" />
       </form>
       <button onClick={handleCancel}>Cancelar</button>
     </>

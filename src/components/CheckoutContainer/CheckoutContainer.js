@@ -7,7 +7,9 @@ import { db } from "../../firebase/firebaseConfig";
 import CheckoutForm from "../CheckoutForm/CheckoutForm";
 import { SweetAlertOnlyMsg } from "../SweetAlert/SweetAlert";
 import { Navigate } from "react-router";
+import { CheckoutValidation } from "../CheckoutValidation/CheckoutValidation";
 import "./CheckoutContainer.css";
+import Loading from "../Loading/Loading";
 
 const initialState = {
   name: "",
@@ -21,6 +23,8 @@ const initialState = {
 
 const CheckoutContainer = () => {
   const [order, setOrder] = useState(initialState);
+  const [errors, setErrors] = useState({});
+  const [loading, setLoading] = useState(false);
   const { user } = useAuth();
   const { totalPrice, cart, ClearCart } = useContext(CartContext);
 
@@ -42,16 +46,27 @@ const CheckoutContainer = () => {
     });
   };
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
+  const handleBlur = (e) => {
+    handleChange(e);
+    setErrors(CheckoutValidation(order));
   };
 
   const handleCancel = () => {
     ClearCart();
   };
 
-  const handleBuy = async () => {
-    const q = await collection(db, "orders");
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    setErrors(CheckoutValidation(order));
+    // && Object.keys(cart).length > 0
+    if (Object.keys(errors).length === 0) {
+      setLoading(true);
+      finalFunction();
+    }
+  };
+
+  const finalFunction = async () => {
+    const q = collection(db, "orders");
     const add = await addDoc(q, order).then(({ id }) => id);
 
     SweetAlertOnlyMsg({
@@ -60,20 +75,28 @@ const CheckoutContainer = () => {
       footer: `id: ${add}`,
     });
 
+    setLoading(false);
+    setOrder(initialState);
     setTimeout(() => {
       console.log("hola");
-      <Navigate to="/perfil" />;
-    }, 3000);
+      window.location.href = `/perfil`;
+      // <Navigate to="/perfil" />;
+    }, 5000);
   };
 
   return (
-    <Col className="formulario">
-      <CheckoutForm
-        handleChange={handleChange}
-        handleSubmit={handleSubmit}
-        handleCancel={handleCancel}
-        handleBuy={handleBuy}
-      />
+    <Col>
+      {loading && <Loading />}
+      <div className="formulario">
+        <CheckoutForm
+          handleChange={handleChange}
+          handleSubmit={handleSubmit}
+          handleCancel={handleCancel}
+          handleBlur={handleBlur}
+          errors={errors}
+          order={order}
+        />
+      </div>
     </Col>
   );
 };
