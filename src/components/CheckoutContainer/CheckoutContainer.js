@@ -26,7 +26,7 @@ const CheckoutContainer = () => {
   const [errors, setErrors] = useState({});
   const [loading, setLoading] = useState(false);
   const { user } = useAuth();
-  const { totalPrice, cart, ClearCart } = useContext(CartContext);
+  const { totalPrice, cart, ClearCart, setCart } = useContext(CartContext);
   const navigate = useNavigate();
 
   const handleChange = ({ target: { name, value } }) => {
@@ -79,7 +79,7 @@ const CheckoutContainer = () => {
 
     setLoading(false);
     setOrder(initialState);
-    ClearCart();
+    setCart([]);
     setTimeout(() => {
       console.log("hola");
       navigate("/perfil");

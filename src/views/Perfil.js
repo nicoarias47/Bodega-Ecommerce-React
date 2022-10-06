@@ -1,20 +1,34 @@
-import React from "react";
+import { useEffect, useState } from "react";
 import { Container, Row, Col } from "react-bootstrap";
-import PerfilTable from "../components/PerfilTable/PerfilTable";
+import PerfilAccordion from "../components/PerfilAccordion/PerfilAccordion";
+import Loading from "../components/Loading/Loading";
 import { useAuth } from "../context/AuthContext";
+import { collection, query, where, getDocs } from "firebase/firestore";
+import { db } from "../firebase/firebaseConfig";
 
 const Perfil = () => {
+  const [orderList, setOrderList] = useState([]);
   const { user, loading, logOut } = useAuth();
+  const noImg = <i className="fa-regular fa-user"></i>;
 
   const handleLogout = () => {
     logOut();
   };
 
-  const noImg = <i className="fa-regular fa-user"></i>;
+  const getData = async () => {
+    const q = query(collection(db, "orders"), where("email", "==", user.email));
+    await getDocs(q).then((resp) => {
+      setOrderList(
+        resp.docs.map((order) => ({ ...order.data(), key: order.id }))
+      );
+    });
+  };
 
-  if (loading) return <h1>Loading</h1>;
+  useEffect(() => {
+    getData();
+  }, []);
 
-  console.log(user);
+  if (loading) return <Loading />;
 
   return (
     <Container fluid="lg">
@@ -29,8 +43,17 @@ const Perfil = () => {
           <button onClick={handleLogout}>Cerrar sesión</button>
         </Col>
       </Row>
-      <Row>
-        <PerfilTable />
+      <Row className="pb-5">
+        {orderList.map((el) => {
+          return (
+            <PerfilAccordion
+              key={el.key}
+              date={el.date}
+              id={el.key}
+              data={el}
+            />
+          );
+        })}
       </Row>
     </Container>
   );
