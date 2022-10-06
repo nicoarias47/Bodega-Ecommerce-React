@@ -1,8 +1,10 @@
 import Swal from "sweetalert2";
 import withReactContent from "sweetalert2-react-content";
+import { useNavigate } from "react-router-dom";
 const MySwal = withReactContent(Swal);
 
 export const SweetAlertRedirect = ({ title, text, relocate }) => {
+  const navigate = useNavigate();
   return MySwal.fire({
     title: title,
     text: text,
@@ -15,7 +17,7 @@ export const SweetAlertRedirect = ({ title, text, relocate }) => {
     confirmButtonText: "Aceptar",
   }).then((result) => {
     if (result.isConfirmed) {
-      window.location.href = `/${relocate}`;
+      navigate(`/${relocate}`);
     }
   });
 };

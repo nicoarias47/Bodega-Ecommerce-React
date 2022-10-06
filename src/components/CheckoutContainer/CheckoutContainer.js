@@ -6,7 +6,7 @@ import { collection, addDoc } from "firebase/firestore";
 import { db } from "../../firebase/firebaseConfig";
 import CheckoutForm from "../CheckoutForm/CheckoutForm";
 import { SweetAlertOnlyMsg } from "../SweetAlert/SweetAlert";
-import { Navigate } from "react-router";
+import { useNavigate } from "react-router";
 import { CheckoutValidation } from "../CheckoutValidation/CheckoutValidation";
 import "./CheckoutContainer.css";
 import Loading from "../Loading/Loading";
@@ -27,6 +27,7 @@ const CheckoutContainer = () => {
   const [loading, setLoading] = useState(false);
   const { user } = useAuth();
   const { totalPrice, cart, ClearCart } = useContext(CartContext);
+  const navigate = useNavigate();
 
   const handleChange = ({ target: { name, value } }) => {
     const date = new Date();
@@ -54,6 +55,7 @@ const CheckoutContainer = () => {
   const handleCancel = () => {
     ClearCart();
     setOrder(initialState);
+    navigate("/perfil");
   };
 
   const handleSubmit = (e) => {
@@ -77,10 +79,10 @@ const CheckoutContainer = () => {
 
     setLoading(false);
     setOrder(initialState);
+    ClearCart();
     setTimeout(() => {
       console.log("hola");
-      window.location.href = `/perfil`;
-      // <Navigate to="/perfil" />;
+      navigate("/perfil");
     }, 5000);
   };
 

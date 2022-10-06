@@ -29,8 +29,6 @@ const CartProvider = ({ children }) => {
       text: "¿Estas seguro?",
       confirm() {
         setCart([]);
-        window.location.href = `/carrito`;
-        //return <Navigate to="/" />;
       },
     });
   };
