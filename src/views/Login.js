@@ -50,7 +50,7 @@ const Login = () => {
           </div>
           {error && <MessageError message={error} />}
           <div className=" login d-flex flex-column justify-content-center ">
-            <span className="login-title text-center">Login</span>
+            <h3 className="login-title text-center">Login</h3>
             <form onSubmit={handleSubmit}>
               <div className="mb-2">
                 <label htmlFor="email" className="d-block">

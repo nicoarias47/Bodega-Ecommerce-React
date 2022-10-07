@@ -55,7 +55,6 @@ const CheckoutContainer = () => {
   const handleCancel = () => {
     ClearCart();
     setOrder(initialState);
-    navigate("/perfil");
   };
 
   const handleSubmit = (e) => {
@@ -79,19 +78,18 @@ const CheckoutContainer = () => {
 
     setLoading(false);
     setOrder(initialState);
-    setCart([]);
     setTimeout(() => {
-      console.log("hola");
       navigate("/perfil");
-    }, 5000);
+      setCart([]);
+    }, 4000);
   };
 
   return (
     <Col>
       {loading && <Loading />}
       {Object.keys(cart).length <= 0 ? (
-        <span className="form-errorCart">
-          No posee items en el carro de compras
+        <span className="form-errorCart d-flex">
+          No posees items en el carro de compras
         </span>
       ) : (
         ""

@@ -53,18 +53,18 @@ const CartProvider = ({ children }) => {
 
   // ordenar por precio
 
-  const menorPrecio = (array) => {
-    return array.sort((a, b) => {
-      if (a.price > b.price) {
-        return 1;
-      }
-      if (a.price < b.price) {
-        return -1;
-      }
-      //a===b
-      return 0;
-    });
-  };
+  // const menorPrecio = (array) => {
+  //   return array.sort((a, b) => {
+  //     if (a.price > b.price) {
+  //       return 1;
+  //     }
+  //     if (a.price < b.price) {
+  //       return -1;
+  //     }
+  //     //a===b
+  //     return 0;
+  //   });
+  // };
 
   return (
     <CartContext.Provider
@@ -76,7 +76,6 @@ const CartProvider = ({ children }) => {
         totalPrice,
         totalItems,
         cart,
-        menorPrecio,
         setCart,
       }}
     >

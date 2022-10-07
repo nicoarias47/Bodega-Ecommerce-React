@@ -1,9 +1,10 @@
 import React from "react";
 import { Col } from "react-bootstrap";
 import { Link } from "react-router-dom";
+import ItemList from "../ItemList/ItemList";
 import "./FilterPanel.css";
 
-const FilterPanel = () => {
+const FilterPanel = ({ menorPrecio, vinos }) => {
   return (
     <Col className="col-12 col-sm-6 col-md-4 filter">
       <h1>Filtrar por</h1>

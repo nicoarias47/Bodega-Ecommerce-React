@@ -12,7 +12,7 @@ const CheckoutForm = ({
     <>
       <h1 className="text-center">Checkout</h1>
       <form onSubmit={handleSubmit}>
-        <div className="mb-2">
+        <div className="mb-2 d-flex flex-column">
           <label htmlFor="name" className="d-block">
             Nombre
           </label>
@@ -29,7 +29,7 @@ const CheckoutForm = ({
           />
           {errors.name && <span className="form-error">{errors.name}</span>}
         </div>
-        <div className="mb-2">
+        <div className="mb-2 d-flex flex-column">
           <label htmlFor="lastName" className="d-block">
             Apellido
           </label>
@@ -48,9 +48,9 @@ const CheckoutForm = ({
             <span className="form-error">{errors.lastName}</span>
           )}
         </div>
-        <div className="mb-2">
-          <label htmlFor="tel" className="d-block">
-            Tel---ej: 1188884444---
+        <div className="mb-2 d-flex flex-column">
+          <label htmlFor="tel" className="d-flex justify-content-between">
+            Tel<span>ej: 1188884444</span>
           </label>
           <input
             name="tel"
@@ -65,7 +65,7 @@ const CheckoutForm = ({
           />
           {errors.tel && <span className="form-error">{errors.tel}</span>}
         </div>
-        <div className="mb-2">
+        <div className="mb-2 d-flex flex-column">
           <label htmlFor="province" className="d-block">
             Provincia
           </label>
@@ -142,13 +142,17 @@ const CheckoutForm = ({
             />
           </div>
         </div>
-        {errors.direction && (
-          <span className="form-error">{errors.direction}</span>
-        )}
-        {errors.number && <span className="form-error">{errors.number}</span>}
+        <div className="mb-2 d-flex flex-column">
+          {errors.direction && (
+            <span className="form-error">{errors.direction}</span>
+          )}
+          {errors.number && <span className="form-error">{errors.number}</span>}
+        </div>
         <input type="submit" value="Finalizar Compra" />
       </form>
-      <button onClick={handleCancel}>Cancelar</button>
+      <button onClick={handleCancel} className="mt-2">
+        Cancelar
+      </button>
     </>
   );
 };

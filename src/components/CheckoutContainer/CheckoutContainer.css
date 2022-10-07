@@ -1,18 +1,18 @@
 .formulario {
   margin: 2rem 0 2rem 0;
   padding: 2rem 1rem 2rem 1rem;
-  background-color: #b2936d;
+  background-color: #f4f4f4;
   font-family: "Lato", sans-serif;
-  border: 1px solid #7d7f81;
-  box-shadow: -1px 1px 4px #7d7f81;
+  border: 1px solid #b2936d;
+  box-shadow: -1px 1px 7px #b2936d90;
 }
 
 .formulario h1 {
   font-size: 2rem;
-  font-weight: 300;
+  font-weight: 500;
   font-family: "Cinzel", sans-serif;
   letter-spacing: 1px;
-  color: #2c3136;
+  color: #b2936d;
 }
 
 .formulario label {
@@ -23,26 +23,39 @@
 .formulario input,
 select {
   padding: 0.2rem;
-  border: 1px solid #7d7f81;
-  background-color: #2c3136;
-  color: #b2936d;
+  border: 1px solid #b2936d;
+  background-color: #f4f4f4;
+  color: #2c3136;
 }
 
 .formulario input:focus {
   outline: none;
-  box-shadow: -1px 1px 4px #2c313680;
 }
 
-.formulario button {
+.formulario button,
+input[type="submit"] {
   padding: 0.3rem 0.2rem;
-  border: 1px solid #7d7f81;
-  background-color: #2c3136;
-  color: #7d7f81;
-  margin-bottom: 0.5rem;
+  border: 1px solid #b2936d;
+  background-color: #b2936d;
+  color: #2c3136;
+  width: 100%;
+}
+/* seguir aca */
+.formulario button:hover,
+input[type="submit"]:hover {
+  background-color: #f4f4f4;
+  color: #b2936d;
+  border-color: #b2936d;
 }
 
-.formulario button:hover {
-  background-color: #2c3136;
-  color: #b2936d;
-  box-shadow: -1px 1px 4px #2c313680;
+.form-error {
+  padding: 0.2rem;
+  border-radius: 0.2rem;
+  color: #d55b5b;
+}
+
+.form-errorCart {
+  background-color: #d55b5b;
+  padding: 0.5rem;
+  margin-top: 2rem;
 }
