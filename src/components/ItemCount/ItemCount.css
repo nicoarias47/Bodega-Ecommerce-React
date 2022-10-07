@@ -11,14 +11,36 @@
   padding: 1rem;
 }
 
+.btn-buy {
+  border: 1px solid #b2936d;
+  background-color: #b2936d;
+  color: #2c3136;
+  padding: 0.5rem 0.7rem;
+  margin-top: 2rem;
+  width: 100%;
+}
+
+.btn-buy:hover {
+  background-color: #f4f4f4;
+  color: #b2936d;
+  border: 1px solid #b2936d;
+}
+
+.btn-buy:focus {
+  background-color: #f4f4f4;
+  color: #b2936d;
+  border: 1px solid #b2936d;
+}
+
 .btn-count {
   padding: 0.2rem 0.6rem;
-  border: none;
-  background-color: #2c3136;
-  color: #b2936d;
+  border: 1px solid #b2936d;
+  background-color: #b2936d;
+  color: #2c3136;
 }
 
 .btn-count:hover {
-  background-color: #b2936d;
-  color: #2c3136;
+  background-color: #f4f4f4;
+  color: #b2936d;
+  border: 1px solid #b2936d;
 }

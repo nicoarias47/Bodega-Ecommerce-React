@@ -21,17 +21,18 @@
   padding: 0.4rem 0;
   font-size: 1.1rem;
   font-weight: 400;
+  border: 1px solid #b2936d;
   background-color: #b2936d;
   color: #2c3136;
-  border: 1px solid #2c3136;
   margin-bottom: 10rem;
   text-decoration: none;
   text-align: center;
 }
 
 .shop-clear-btn:hover {
-  background-color: #2c3136;
+  background-color: #f4f4f4;
   color: #b2936d;
+  border-color: #b2936d;
 }
 
 table {

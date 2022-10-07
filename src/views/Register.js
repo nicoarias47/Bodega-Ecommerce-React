@@ -36,7 +36,7 @@ const Register = () => {
         <Col className="col-12 col-sm-8 col-md-6 col-lg-4">
           {error && <MessageError message={error} />}
           <div className=" login d-flex flex-column justify-content-center ">
-            <span className="login-title text-center">Register</span>
+            <h3 className="login-title text-center">Register</h3>
             <form onSubmit={handleSubmit}>
               <div className="mb-2">
                 <label htmlFor="email" className="d-block">

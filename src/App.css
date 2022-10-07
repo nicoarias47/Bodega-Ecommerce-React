@@ -105,14 +105,15 @@ body {
 
 .perfil_details button {
   padding: 0.2rem 0.4rem;
-  background-color: #2c3136;
+  background-color: #f4f4f4;
   color: #b2936d;
   border: none;
   font-size: 1rem;
 }
 
 .perfil_details button:hover {
-  background-color: #494f54;
+  background-color: #2c3136;
+  color: #b2936d;
 }
 
 .perfil-subtitle {

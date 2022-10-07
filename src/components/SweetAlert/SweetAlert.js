@@ -1,23 +1,23 @@
 import Swal from "sweetalert2";
 import withReactContent from "sweetalert2-react-content";
-import { useNavigate } from "react-router-dom";
 const MySwal = withReactContent(Swal);
 
 export const SweetAlertRedirect = ({ title, text, relocate }) => {
-  const navigate = useNavigate();
   return MySwal.fire({
     title: title,
     text: text,
     icon: "warning",
     color: "#b2936d",
-    background: "#2c3136",
+    background: "#f4f4f4",
     showCancelButton: true,
     confirmButtonColor: "#b2936d",
     cancelButtonColor: "#7d7f81",
     confirmButtonText: "Aceptar",
   }).then((result) => {
     if (result.isConfirmed) {
-      navigate(`/${relocate}`);
+      // utilizo js vanilla para redireccionar por que useNavigate y Navigate
+      // me ocasionan un error junto con este sweet alert
+      window.location.replace(`/${relocate}`);
     }
   });
 };
@@ -28,7 +28,7 @@ export const SweetAlertWithCancel = ({ title, text, confirm }) => {
     text: text,
     icon: "warning",
     color: "#b2936d",
-    background: "#2c3136",
+    background: "#f4f4f4",
     showCancelButton: true,
     confirmButtonColor: "#b2936d",
     cancelButtonColor: "#7d7f81",
@@ -46,7 +46,7 @@ export const SweetAlertOnlyMsg = ({ title, text, footer }) => {
     text: text,
     footer: footer,
     color: "#b2936d",
-    background: "#2c3136",
+    background: "#f4f4f4",
     confirmButtonColor: "#b2936d",
     confirmButtonText: "Aceptar",
   });

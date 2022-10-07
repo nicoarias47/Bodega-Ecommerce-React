@@ -7,9 +7,11 @@ const PerfilAccordion = ({ id, date, data }) => {
     <Accordion>
       <Accordion.Item eventKey={id}>
         <Accordion.Header>
-          <div>ID: {id}</div>
-          <div className="d-flex ms-5">Total: ${data.totalPrice}</div>
-          <div className="d-flex ms-5">Fecha: {date}</div>
+          <div className="d-flex flex-row gap-3 flex-wrap">
+            <div>ID: {id}</div>
+            <div>Total: ${data.totalPrice}</div>
+            <div>Fecha: {date}</div>
+          </div>
         </Accordion.Header>
         <Accordion.Body>
           <table>
@@ -17,17 +19,19 @@ const PerfilAccordion = ({ id, date, data }) => {
               <tr>
                 <th>Nombre</th>
                 <th>Variedad</th>
+                <th>Direccion de entrega</th>
                 <th>Cantidad</th>
                 <th>Precio</th>
               </tr>
             </thead>
             <tbody>
               {data.items.map((el) => (
-                <PerfilTable order={el} key={el.id} />
+                <PerfilTable order={el} key={el.id} data={data} />
               ))}
             </tbody>
             <tfoot>
               <tr>
+                <td></td>
                 <td></td>
                 <td></td>
                 <td>TOTAL</td>

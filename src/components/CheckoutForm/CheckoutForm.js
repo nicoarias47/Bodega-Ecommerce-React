@@ -118,7 +118,7 @@ const CheckoutForm = ({
               type="text"
               name="direction"
               id="direction"
-              placeholder="Av. siempre viva"
+              placeholder="Av siempre viva"
               required
               value={order.direction}
               onBlur={handleBlur}

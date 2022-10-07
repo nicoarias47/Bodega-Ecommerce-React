@@ -7,23 +7,27 @@
   color: red;
 }
 
+.accordion-button {
+  color: #b2936d;
+  background-color: #f4f4f4;
+  border: 1px solid #b2936d;
+}
+
 .accordion-button:focus {
   outline: none;
   box-shadow: none;
+  border: 1px solid #b2936d;
 }
 
 .accordion-button:not(.collapsed) {
-  color: #ffff;
-  background-color: #b2936d;
-}
-
-.accordion-button {
-  color: #ffff;
-  background-color: #b2936d;
+  color: #b2936d;
+  background-color: #f4f4f4;
+  border: 1px solid #b2936d;
 }
 
 .accordion-body {
-  background-color: #ffff;
+  background-color: #f4f4f4;
+  border: 1px solid #b2936d;
 }
 
 .accordion-item:first-of-type .accordion-button {
