@@ -15,6 +15,7 @@
   text-transform: uppercase;
   margin-right: 1rem;
   padding-top: 1.5rem;
+  transition: 500ms;
 }
 
 .nav-link:hover {
@@ -26,7 +27,7 @@
 }
 
 .navbar-brand img {
-  width: 115px;
+  width: 200px;
 }
 
 .nav-login {
@@ -42,5 +43,12 @@
   #basic-navbar-nav {
     display: flex;
     justify-content: space-around;
+  }
+}
+
+@media (max-width: 768px) {
+  .cart-login {
+    display: flex;
+    flex-direction: column;
   }
 }

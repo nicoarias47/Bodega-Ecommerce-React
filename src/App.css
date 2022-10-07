@@ -10,6 +10,79 @@ body {
   font-family: lato, sans-serif;
 }
 
+/* Home */
+
+.home {
+  background-image: url("/public/assets/fondo.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  height: 85vh;
+}
+
+.btn-home {
+  background-color: transparent;
+  color: #b2936d;
+  border: 1px solid #b2936d;
+  padding: 0.2rem 0.4rem;
+  font-size: 1.8rem;
+  font-family: "Cinzel", sans-serif;
+  text-decoration: none;
+  transition: 500ms;
+}
+
+.btn-home:hover {
+  color: #c4c4c4;
+  border: 1px solid #c4c4c4;
+}
+
+/* Animacion btn home */
+.slide-in-blurred-left {
+  -webkit-animation: slide-in-blurred-left 1s cubic-bezier(0.23, 1, 0.32, 1)
+    both;
+  animation: slide-in-blurred-left 1s cubic-bezier(0.23, 1, 0.32, 1) both;
+}
+@-webkit-keyframes slide-in-blurred-left {
+  0% {
+    -webkit-transform: translateX(-1000px) scaleX(2.5) scaleY(0.2);
+    transform: translateX(-1000px) scaleX(2.5) scaleY(0.2);
+    -webkit-transform-origin: 100% 50%;
+    transform-origin: 100% 50%;
+    -webkit-filter: blur(40px);
+    filter: blur(40px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateX(0) scaleY(1) scaleX(1);
+    transform: translateX(0) scaleY(1) scaleX(1);
+    -webkit-transform-origin: 50% 50%;
+    transform-origin: 50% 50%;
+    -webkit-filter: blur(0);
+    filter: blur(0);
+    opacity: 1;
+  }
+}
+@keyframes slide-in-blurred-left {
+  0% {
+    -webkit-transform: translateX(-1000px) scaleX(2.5) scaleY(0.2);
+    transform: translateX(-1000px) scaleX(2.5) scaleY(0.2);
+    -webkit-transform-origin: 100% 50%;
+    transform-origin: 100% 50%;
+    -webkit-filter: blur(40px);
+    filter: blur(40px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateX(0) scaleY(1) scaleX(1);
+    transform: translateX(0) scaleY(1) scaleX(1);
+    -webkit-transform-origin: 50% 50%;
+    transform-origin: 50% 50%;
+    -webkit-filter: blur(0);
+    filter: blur(0);
+    opacity: 1;
+  }
+}
+
 /* Login */
 
 .login {
@@ -123,4 +196,12 @@ body {
 
 .perfil-orders {
   min-height: 70vh;
+}
+
+@media (min-width: 768px) {
+  .spinner {
+    position: relative;
+    left: 50%;
+    top: 10%;
+  }
 }

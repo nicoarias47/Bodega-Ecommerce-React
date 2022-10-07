@@ -27,15 +27,18 @@ const NavBar = () => {
             <Link to="/tienda" className="nav-link">
               Tienda
             </Link>
-            <Link to="/contacto" className="nav-link">
+            <Link to="/" className="nav-link">
               Contacto
             </Link>
           </Nav>
-          <div className="d-flex align-items-baseline">
-            <Link to="/carrito" style={{ textDecoration: "none" }}>
+          <div className="d-flex align-items-baseline  cart-login">
+            <Link
+              to="/carrito"
+              style={{ textDecoration: "none", paddingRight: "1rem" }}
+            >
               <CartWidget />
             </Link>
-            <div className="px-2">
+            <div>
               {!user ? (
                 <Link
                   to="/login"
