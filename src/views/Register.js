@@ -67,8 +67,11 @@ const Register = () => {
                 Registrarse
               </button>
             </form>
-            <span className="text-center py-2 d-flex justify-content-between">
-              ¿Ya posee una cuenta? <Link to="/login">Iniciar Sesión</Link>
+            <span className="py-2 d-flex justify-content-between">
+              ¿Ya posee una cuenta?{" "}
+              <Link to="/login" className="text-end">
+                Iniciar Sesión
+              </Link>
             </span>
           </div>
         </Col>

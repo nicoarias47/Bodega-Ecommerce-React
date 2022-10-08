@@ -79,7 +79,9 @@ const Login = () => {
               </div>
               <div className="mb-2 d-flex justify-content-between align-items-center">
                 <button>Iniciar Sesión</button>
-                <Link to="/forgotpassword">¿Olvidaste tu contraseña?</Link>
+                <Link to="/forgotpassword" className="text-end">
+                  ¿Olvidaste tu contraseña?
+                </Link>
               </div>
             </form>
             <button
@@ -90,7 +92,7 @@ const Login = () => {
               <div>Iniciar Sesión con Google</div>
               <div></div>
             </button>
-            <span className="text-center py-2 d-flex justify-content-between">
+            <span className=" py-2 d-flex justify-content-between">
               ¿No posees una cuenta? <Link to="/register">Registrarse</Link>
             </span>
           </div>

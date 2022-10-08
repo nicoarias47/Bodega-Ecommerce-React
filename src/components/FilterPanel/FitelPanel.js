@@ -24,10 +24,10 @@ const FilterPanel = () => {
       </h4>
       <h4>
         <NavLink
-          to="/tienda/blend"
+          to="/tienda/bonarda"
           style={({ isActive }) => (isActive ? activeStyle : undefined)}
         >
-          Blend
+          Bonarda
         </NavLink>
       </h4>
       <h4>
