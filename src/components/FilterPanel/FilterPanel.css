@@ -39,4 +39,5 @@ h4:hover {
 .filter a {
   text-decoration: none;
   color: #474747;
+  transition: 250ms;
 }

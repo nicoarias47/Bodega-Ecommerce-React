@@ -1,30 +1,58 @@
 import React from "react";
 import { Col } from "react-bootstrap";
-import { Link } from "react-router-dom";
-import ItemList from "../ItemList/ItemList";
+import { NavLink } from "react-router-dom";
 import "./FilterPanel.css";
 
-const FilterPanel = ({ menorPrecio, vinos }) => {
+const FilterPanel = () => {
+  let activeStyle = {
+    color: "#b2936d",
+  };
+
   return (
     <Col className="col-12 col-sm-6 col-md-4 filter">
       <h1>Filtrar por</h1>
       <h3>
-        <Link to="/tienda">Vinos</Link>
+        <NavLink to="/tienda">Vinos</NavLink>
       </h3>
       <h4>
-        <Link to="/tienda/malbec">Malbec</Link>
+        <NavLink
+          to="/tienda/malbec"
+          style={({ isActive }) => (isActive ? activeStyle : undefined)}
+        >
+          Malbec
+        </NavLink>
       </h4>
       <h4>
-        <Link to="/tienda/blend">Blend</Link>
+        <NavLink
+          to="/tienda/blend"
+          style={({ isActive }) => (isActive ? activeStyle : undefined)}
+        >
+          Blend
+        </NavLink>
       </h4>
       <h4>
-        <Link to="/tienda/cabernet">Cabernet Sauvignon</Link>
+        <NavLink
+          to="/tienda/cabernet"
+          style={({ isActive }) => (isActive ? activeStyle : undefined)}
+        >
+          Cabernet Sauvignon
+        </NavLink>
       </h4>
       <h4>
-        <Link to="/tienda/syrah">Syrah</Link>
+        <NavLink
+          to="/tienda/syrah"
+          style={({ isActive }) => (isActive ? activeStyle : undefined)}
+        >
+          Syrah
+        </NavLink>
       </h4>
       <h4>
-        <Link to="/tienda/blanco">Blanco</Link>
+        <NavLink
+          to="/tienda/blanco"
+          style={({ isActive }) => (isActive ? activeStyle : undefined)}
+        >
+          Blanco
+        </NavLink>
       </h4>
       <h3>Precio</h3>
       <h4>Mayor precio</h4>

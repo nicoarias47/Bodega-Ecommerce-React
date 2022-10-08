@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import Container from "react-bootstrap/Container";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
@@ -11,6 +11,10 @@ import "./NavBar.css";
 const NavBar = () => {
   const { user } = useAuth();
 
+  let activeStyle = {
+    color: "#b2936d",
+  };
+
   return (
     <Navbar expand="md" className="nav-bar">
       <Container fluid="lg">
@@ -21,15 +25,23 @@ const NavBar = () => {
         <Navbar.Collapse id="basic-navbar-nav">
           <div></div>
           <Nav>
-            <Link to="/" className="nav-link">
+            <NavLink
+              to="/"
+              className="nav-link"
+              style={({ isActive }) => (isActive ? activeStyle : undefined)}
+            >
               Inicio
-            </Link>
-            <Link to="/tienda" className="nav-link">
+            </NavLink>
+            <NavLink
+              to="/tienda"
+              className="nav-link"
+              style={({ isActive }) => (isActive ? activeStyle : undefined)}
+            >
               Tienda
-            </Link>
-            <Link to="/" className="nav-link">
+            </NavLink>
+            <span className="nav-link" style={{ cursor: "pointer" }}>
               Contacto
-            </Link>
+            </span>
           </Nav>
           <div className="d-flex align-items-baseline  cart-login">
             <Link
@@ -40,21 +52,21 @@ const NavBar = () => {
             </Link>
             <div>
               {!user ? (
-                <Link
+                <NavLink
                   to="/login"
-                  style={{ textDecoration: "none" }}
                   className="nav-link"
+                  style={({ isActive }) => (isActive ? activeStyle : undefined)}
                 >
                   Login
-                </Link>
+                </NavLink>
               ) : (
-                <Link
-                  to="/login"
-                  style={{ textDecoration: "none" }}
+                <NavLink
+                  to="/perfil"
                   className="nav-link"
+                  style={({ isActive }) => (isActive ? activeStyle : undefined)}
                 >
                   Perfil
-                </Link>
+                </NavLink>
               )}
             </div>
           </div>

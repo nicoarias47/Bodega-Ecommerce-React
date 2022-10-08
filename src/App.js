@@ -11,7 +11,6 @@ import Cart from "./components/Cart/Cart";
 //VIEWS
 import Home from "./views/Home";
 import Shop from "./views/Shop";
-import Contact from "./views/Contact";
 import ItemDetailContainer from "./components/ItemDetailContainer/ItemDetailContainer";
 import Perfil from "./views/Perfil";
 import Login from "./views/Login";
@@ -37,7 +36,6 @@ function App() {
             <Route path="/" element={<Home />} />
             <Route path="/tienda" element={<Shop />} />
             <Route path="/tienda/:categoryId" element={<Shop />} />
-            <Route path="/contacto" element={<Contact />} />
             <Route path="/detalle/:id" element={<ItemDetailContainer />} />
             <Route path="/carrito" element={<Cart />} />
             <Route

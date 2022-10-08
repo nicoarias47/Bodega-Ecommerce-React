@@ -33,6 +33,7 @@
   font-size: 1.8rem;
   color: #b2936d;
   padding: 0.5rem;
+  transition: 500ms;
 }
 
 .footer-social i:hover {
