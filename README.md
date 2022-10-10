@@ -1,9 +1,13 @@
 # Bodega de Vinos - Proyecto Ecommerce para CoderHouse
 
-### Esta rama representa un desafío de CoderHouse en el cual se solicitaba la utilización de Context
+### Proyecto realizado para la cursada de React en CoderHouse, el cual esta construido con context, firebase y bootstrap.
 
-## Para comenzar utilizar:
+## Librerias utilizadas:
 
-### npm run start
+### react-router-dom
 
-### npm run api
+### React-Bootstrap
+
+### sweetalert2-react-conten
+
+## npm run start para comenzar a utilizar

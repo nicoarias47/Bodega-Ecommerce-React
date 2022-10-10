@@ -2,7 +2,7 @@ import React from "react";
 
 const Error404 = () => {
   return (
-    <div className="bg-danger text-center p-5">
+    <div className="bg-danger text-center p-5 error404">
       <h2>Error 404</h2>
       <span>Not Found</span>
     </div>

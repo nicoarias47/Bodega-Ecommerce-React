@@ -1,6 +1,5 @@
 import Swal from "sweetalert2";
 import withReactContent from "sweetalert2-react-content";
-import { Navigate } from "react-router-dom";
 const MySwal = withReactContent(Swal);
 
 export const SweetAlertRedirect = async ({ title, text }) => {
@@ -18,8 +17,7 @@ export const SweetAlertRedirect = async ({ title, text }) => {
     if (result.isConfirmed) {
       // utilizo js vanilla para redireccionar por que useNavigate y Navigate
       // me ocasionan un error junto con este sweet alert
-      //window.location.replace(`/${relocate}`);
-      <Navigate to="/login" />;
+      window.location.replace(`/login`);
     }
   });
 };
