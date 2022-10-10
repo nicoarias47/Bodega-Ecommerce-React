@@ -205,11 +205,3 @@ body {
   padding: 0.4rem;
   border-radius: 100%;
 }
-
-@media (min-width: 768px) {
-  .spinner {
-    position: relative;
-    left: 50%;
-    top: 10%;
-  }
-}

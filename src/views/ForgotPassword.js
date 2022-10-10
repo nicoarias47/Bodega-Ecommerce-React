@@ -14,7 +14,9 @@ const ForgotEmail = () => {
     try {
       await resetPassword(user);
     } catch (error) {
-      setError(error.message);
+      if (error.code === "auth/user-not-found") {
+        return setError("Este usuario no se encuentra registrado");
+      }
     }
   };
 

@@ -19,7 +19,6 @@ const CartDetail = () => {
       return SweetAlertRedirect({
         title: "Debes estar logeado para continuar",
         text: "¿Ir al login?",
-        relocate: "login",
       });
 
     return navigate("/checkout");

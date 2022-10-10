@@ -25,7 +25,13 @@ const Register = () => {
       await singUp(user.email, user.password);
       navigate("/login");
     } catch (error) {
-      setError(error.message);
+      if (error.code === "auth/internal-error") {
+        setError("Correo Invalido");
+      } else if (error.code === "auth/weak-password") {
+        setError("Contraseña invalida, utilizar al menos 6 caracteres");
+      } else if (error.code === "auth/email-already-in-use") {
+        setError("Este email ya esta en uso");
+      }
     }
   };
 

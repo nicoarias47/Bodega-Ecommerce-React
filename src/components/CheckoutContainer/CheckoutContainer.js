@@ -71,8 +71,8 @@ const CheckoutContainer = () => {
     const add = await addDoc(q, order).then(({ id }) => id);
 
     SweetAlertOnlyMsg({
-      title: "Gracias por su compra",
-      text: `Sera redirigido a su perfil, donde podra ver sus compras`,
+      title: "Gracias por elegirnos",
+      text: `sera redirigido a su perfil`,
       footer: `id: ${add}`,
     });
 

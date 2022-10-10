@@ -24,7 +24,7 @@ const Login = () => {
       await login(user.email, user.password);
       navigate("/perfil");
     } catch (error) {
-      setError(error.message);
+      setError("Email o Contraseña no validos");
     }
   };
 
@@ -34,7 +34,7 @@ const Login = () => {
       await loginWithGoogle();
       navigate("/perfil");
     } catch (error) {
-      setError(error.message);
+      setError("Error al iniciar sesion con google");
     }
   };
 

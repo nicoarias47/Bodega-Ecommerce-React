@@ -32,7 +32,7 @@ const ItemListContainer = () => {
     <Container className="py-5" fluid="lg">
       <Row>
         <FilterPanel />
-        <Col className="col-12 col-sm-6 col-md-8 d-flex flex-wrap gap-2 panel-vinos">
+        <Col className="col-12 col-sm-6 col-md-8 d-flex flex-wrap gap-2 justify-content-center panel-vinos">
           {vinos.length === 0 ? <Loading /> : <ItemList vinos={vinos} />}
         </Col>
       </Row>
