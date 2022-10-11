@@ -11,5 +11,3 @@
 ### sweetalert2-react-conten
 
 ## npm run start para comenzar a utilizar
-
-[![Netlify Status](https://api.netlify.com/api/v1/badges/7ac4a3a8-d791-4e98-af9d-d99b6efbc11a/deploy-status)](https://app.netlify.com/sites/soulwine/deploys)

@@ -3,7 +3,8 @@ import { Col } from "react-bootstrap";
 import { CartContext } from "../../context/CartContext";
 import { Link, useNavigate } from "react-router-dom";
 import { useAuth } from "../../context/AuthContext";
-import { SweetAlertRedirect } from "../SweetAlert/SweetAlert";
+import Swal from "sweetalert2";
+import withReactContent from "sweetalert2-react-content";
 import "./CartDetail.css";
 
 const CartDetail = () => {
@@ -15,11 +16,24 @@ const CartDetail = () => {
   let navigate = useNavigate();
 
   const handleClick = () => {
-    if (!user)
-      return SweetAlertRedirect({
+    if (!user) {
+      const MySwal = withReactContent(Swal);
+      return MySwal.fire({
         title: "Debes estar logeado para continuar",
         text: "¿Ir al login?",
+        icon: "warning",
+        color: "#b2936d",
+        background: "#f4f4f4",
+        showCancelButton: true,
+        confirmButtonColor: "#b2936d",
+        cancelButtonColor: "#7d7f81",
+        confirmButtonText: "Aceptar",
+      }).then((result) => {
+        if (result.isConfirmed) {
+          navigate("/login");
+        }
       });
+    }
 
     return navigate("/checkout");
   };
